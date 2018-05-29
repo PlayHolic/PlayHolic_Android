@@ -1,3 +1,17 @@
 <resources>
-    <string name = "app_name">PlayHolic_Android</string>
+    <string name = "app_name">PLIC</string>
+    
+    <string name = "my_ticket">MY티켓</string>
+    <string name = "go_history">히스토리 보러가기</string>
+    
+    <string name = "go_star">별점매기기</string>
+    <string name = "go_comment">코멘트쓰기</string>
+    
+    <string name = "star">별점</string>
+    <string name = "comment">코멘트</string>
+    <string name = "wish">위시리스트</string>
+    
+    <string name = "crew">제작진</string>
+    <string name = "cast">출연진</string>
+    <string name = "age">관람연령</string>
 </resources>

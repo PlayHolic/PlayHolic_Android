@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    >
+    
+    
+    <android.support.constraint.ConstraintLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "80dp"
+        android:background = "@android:color/white"
+        android:padding = "@dimen/item_default_margin"
+        >
+        
+        <TextView
+            android:id = "@+id/text_bucket_day"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:background = "@drawable/border_round_purple"
+            android:maxLines = "1"
+            android:paddingEnd = "9dp"
+            android:paddingStart = "9dp"
+            android:textColor = "@color/colorAccent"
+            android:textSize = "12sp"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            />
+        
+        <TextView
+            android:id = "@+id/text_bucket_title"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:layout_marginStart = "6dp"
+            android:maxLines = "1"
+            android:textColor = "@color/colorFadeBlack"
+            android:textSize = "14sp"
+            app:layout_constraintBottom_toBottomOf = "@+id/text_bucket_day"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toEndOf = "@+id/text_bucket_day"
+            app:layout_constraintTop_toTopOf = "@+id/text_bucket_day"
+            />
+        
+        <TextView
+            android:id = "@+id/text_bucket_date"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:textColor = "@color/colorFadeBlack"
+            android:textSize = "12sp"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toBottomOf = "@+id/text_bucket_day"
+            app:layout_constraintVertical_bias = "1"
+            />
+        
+        <View
+            android:id = "@+id/view_bucket_line"
+            android:layout_width = "1dp"
+            android:layout_height = "0dp"
+            android:layout_marginBottom = "2dp"
+            android:layout_marginStart = "10dp"
+            android:layout_marginTop = "2dp"
+            android:background = "@color/colorFadeBlack"
+            app:layout_constraintBottom_toBottomOf = "@+id/text_bucket_date"
+            app:layout_constraintStart_toEndOf = "@+id/text_bucket_date"
+            app:layout_constraintTop_toBottomOf = "@+id/text_bucket_date"
+            app:layout_constraintTop_toTopOf = "@+id/text_bucket_date"
+            />
+        
+        <TextView
+            android:id = "@+id/text_bucket_location"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_marginStart = "10dp"
+            android:textColor = "@color/colorFadeBlack"
+            android:textSize = "12sp"
+            app:layout_constraintBottom_toBottomOf = "@+id/text_bucket_date"
+            app:layout_constraintStart_toEndOf = "@+id/view_bucket_line"
+            app:layout_constraintTop_toTopOf = "@+id/text_bucket_date"
+            />
+    
+    </android.support.constraint.ConstraintLayout>
+</layout>

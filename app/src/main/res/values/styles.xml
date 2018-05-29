@@ -2,11 +2,43 @@
 
     <!-- Base application theme. -->
     <style name = "AppTheme"
-        parent = "Theme.AppCompat.Light.DarkActionBar">
+        parent = "Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name = "colorPrimary">@color/colorPrimary</item>
         <item name = "colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name = "colorAccent">@color/colorAccent</item>
+    </style>
+    
+    <style name = "ToolbarTitle">
+        <item name = "android:textSize">20dp</item>
+        <item name = "android:textColor">@color/colorFadeBlack</item>
+        <item name = "android:fontFamily">@font/nanum_gothic_bold</item>
+    </style>
+    
+    <style name = "FloatSubButton">
+        <item name = "fab_size">mini</item>
+        <item name = "fab_colorPressed">@color/colorAccent</item>
+        <item name = "fab_colorNormal">@color/colorAccent</item>
+        <item name = "android:scaleType">centerInside</item>
+    </style>
+    
+    <style name = "FloatLabel">
+        <item name = "android:textSize">12sp</item>
+        <item name = "android:paddingEnd">6dp</item>
+        <item name = "android:gravity">center</item>
+        <item name = "android:paddingStart">6dp</item>
+        <item name = "android:paddingBottom">3dp</item>
+        <item name = "android:paddingTop">2dp</item>
+        <item name = "android:textColor">@color/colorAccent</item>
+        <item name = "android:background">@drawable/border_round_purple</item>
+    </style>
+    
+    <style name="ItemButton">
+        <item name = "android:padding">15dp</item>
+        <item name = "android:drawablePadding">2dp</item>
+        <item name = "android:textColor">@color/colorWarmGray</item>
+        <item name = "android:textSize">12sp</item>
+        <item name = "layout_constraintHorizontal_chainStyle">packed</item>
     </style>
 
 </resources>

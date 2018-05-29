@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    >
+    
+
+<com.ramotion.foldingcell.FoldingCell
+    android:layout_width = "match_parent"
+    app:animationDuration ="1300"
+    android:layout_height = "wrap_content"
+    >
+    
+    <include
+        layout="@layout/item_ticket_content"/>
+    <include
+        layout="@layout/item_ticket_title"/>
+    
+
+</com.ramotion.foldingcell.FoldingCell>
+</layout>

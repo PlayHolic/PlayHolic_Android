@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    >
+    
+    
+    <android.support.constraint.ConstraintLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "135dp"
+        android:background = "@android:color/white"
+        >
+        
+        <CheckBox
+            android:id = "@+id/ck_ticket"
+            android:layout_width = "wrap_content"
+            android:layout_height = "0dp"
+            android:background = "@color/colorPrimaryDark"
+            android:visibility = "gone"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            />
+        
+        <ImageView
+            android:id = "@+id/img_ticket_top_poster"
+            android:layout_width = "0dp"
+            android:layout_height = "0dp"
+            android:background = "@color/colorFadeBlack"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintDimensionRatio = "23:33"
+            app:layout_constraintStart_toEndOf = "@+id/ck_ticket"
+            app:layout_constraintTop_toTopOf = "parent"
+            />
+        
+        <TextView
+            android:id = "@+id/text_ticket_top_title"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_marginStart = "@dimen/item_default_margin"
+            android:layout_marginTop = "@dimen/item_default_margin"
+            android:textColor = "@color/colorFadeBlack"
+            android:textSize = "13sp"
+            app:layout_constraintStart_toEndOf = "@+id/img_ticket_top_poster"
+            app:layout_constraintTop_toTopOf = "parent"
+            />
+        
+        <TextView
+            android:id = "@+id/text_ticket_top_date"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_marginTop = "10dp"
+            android:textColor = "@color/colorFadeBlack"
+            android:textSize = "13sp"
+            app:layout_constraintStart_toStartOf = "@+id/text_ticket_top_title"
+            app:layout_constraintTop_toBottomOf = "@+id/text_ticket_top_title"
+            />
+        
+        <TextView
+            android:id = "@+id/text_ticket_top_location"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:textSize = "13sp"
+            app:layout_constraintStart_toStartOf = "@+id/text_ticket_top_title"
+            app:layout_constraintTop_toBottomOf = "@+id/text_ticket_top_date"
+            />
+        
+        <View
+            android:id = "@+id/view_ticket_line"
+            android:layout_width = "0dp"
+            android:layout_height = "1dp"
+            app:layout_constraintBottom_toTopOf="@+id/text_go_star"
+            android:layout_marginTop = "@dimen/item_default_margin"
+            android:background = "@color/colorWarmGray"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toEndOf = "@+id/img_ticket_top_poster"
+            app:layout_constraintTop_toBottomOf = "@+id/text_ticket_top_location"
+            />
+    
+        
+        <TextView
+            android:id = "@+id/text_go_star"
+            style = "@style/ItemButton"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            android:drawableStart = "@drawable/ic_graystar"
+            android:text = "@string/go_star"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toStartOf="@+id/text_go_comment"
+            app:layout_constraintStart_toEndOf="@+id/img_ticket_top_poster"
+            app:layout_constraintTop_toBottomOf = "@+id/view_ticket_line"
+            />
+        
+        <TextView
+            android:id = "@+id/text_go_comment"
+            style = "@style/ItemButton"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:drawableStart = "@drawable/ic_write"
+            android:text = "@string/go_comment"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toEndOf = "@+id/text_go_star"
+            app:layout_constraintTop_toBottomOf = "@+id/view_ticket_line"
+            />
+    
+    </android.support.constraint.ConstraintLayout>
+</layout>

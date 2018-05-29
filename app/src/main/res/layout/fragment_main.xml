@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    >
+    
+    
+    <android.support.constraint.ConstraintLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        android:background = "@color/colorPrimaryDark"
+        >
+        
+        <include
+            android:id = "@+id/toolbar"
+            layout = "@layout/toolbar_main"
+            />
+        
+        <android.support.v7.widget.RecyclerView
+            android:id = "@+id/recycler_bucket"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:layout_marginTop = "2dp"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toBottomOf = "@+id/toolbar"
+            />
+        
+        <TextView
+            android:id = "@+id/text_main_title"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_margin = "@dimen/item_default_margin"
+            android:text = "@string/my_ticket"
+            android:textColor = "@color/colorFadeBlack"
+            android:textSize = "16sp"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toBottomOf = "@+id/recycler_bucket"
+            />
+        
+        <TextView
+            android:id = "@+id/text_main_count"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:background = "@drawable/border_rec_gray"
+            android:padding = "2dp"
+            android:textColor = "@color/colorWarmGray"
+            android:textSize = "12sp"
+            app:layout_constraintBottom_toBottomOf = "@+id/text_main_title"
+            app:layout_constraintStart_toEndOf = "@+id/text_main_title"
+            />
+        
+        <TextView
+            android:id = "@+id/btn_history"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_marginEnd = "@dimen/item_default_margin"
+            android:background = "@drawable/border_round_purple"
+            android:drawableEnd = "@drawable/ic_chevron_right_black_24dp"
+            android:gravity = "center"
+            android:paddingBottom = "3dp"
+            android:paddingEnd = "3dp"
+            android:paddingStart = "9dp"
+            android:paddingTop = "3dp"
+            android:text = "@string/go_history"
+            android:textColor = "@color/colorAccent"
+            android:textSize = "12sp"
+            app:layout_constraintBottom_toBottomOf = "@+id/text_main_title"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintTop_toTopOf = "@+id/text_main_title"
+            />
+        
+        <android.support.v7.widget.RecyclerView
+            android:id = "@+id/recycler_ticket"
+            android:layout_width = "0dp"
+            android:layout_height = "0dp"
+            android:layout_marginTop = "@dimen/item_default_margin"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "@+id/btn_history"
+            app:layout_constraintStart_toStartOf = "@+id/text_main_title"
+            app:layout_constraintTop_toBottomOf = "@+id/text_main_title"
+            />
+            
+        <include
+            android:id = "@+id/float_main"
+            layout = "@layout/floating_main"
+            />
+        
+    </android.support.constraint.ConstraintLayout>
+</layout>
