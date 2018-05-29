@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    >
+    
+    
+    <android.support.constraint.ConstraintLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        >
+        
+        <com.github.clans.fab.FloatingActionMenu
+            android:id = "@+id/float_menu"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:padding = "16dp"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:menu_colorNormal = "@color/colorAccent"
+            app:menu_colorPressed = "@color/colorAccent"
+            app:menu_labels_position = "left"
+            app:menu_labels_style = "@style/FloatLabel"
+            app:menu_openDirection = "up"
+            >
+            
+            <com.github.clans.fab.FloatingActionButton
+                android:id = "@+id/float_wish"
+                style = "@style/FloatSubButton"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:src = "@drawable/ic_wishlist_w"
+                app:fab_label = "@string/wish"
+                />
+            
+            <com.github.clans.fab.FloatingActionButton
+                android:id = "@+id/float_star"
+                style = "@style/FloatSubButton"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:src = "@drawable/ic_star_w"
+                app:fab_label = "@string/star"
+                />
+            
+            <com.github.clans.fab.FloatingActionButton
+                android:id = "@+id/float_comment"
+                style = "@style/FloatSubButton"
+                android:layout_width = "wrap_content"
+                android:layout_height = "wrap_content"
+                android:src = "@drawable/ic_write_w"
+                app:fab_label = "@string/comment"
+                />
+        </com.github.clans.fab.FloatingActionMenu>
+    </android.support.constraint.ConstraintLayout>
+</layout>
