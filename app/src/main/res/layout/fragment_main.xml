@@ -63,7 +63,7 @@
             android:paddingStart = "9dp"
             android:paddingTop = "3dp"
             android:text = "@string/go_history"
-            android:textColor = "@color/colorAccent"
+            android:textColor = "@color/colorPrimary"
             android:textSize = "12sp"
             app:layout_constraintBottom_toBottomOf = "@+id/text_main_title"
             app:layout_constraintEnd_toEndOf = "parent"
