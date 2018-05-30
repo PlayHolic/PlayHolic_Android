@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    >
+        
+        <android.support.design.widget.CoordinatorLayout
+            android:id = "@+id/coord_search"
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:orientation = "vertical"
+            >
+            
+            <android.support.design.widget.AppBarLayout
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                android:orientation = "vertical"
+                >
+                
+                <android.support.v7.widget.Toolbar
+                    android:id = "@+id/toolbar"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "?android:attr/actionBarSize"
+                    android:background = "@android:color/white"
+                    android:padding = "10dp"
+                    app:layout_scrollFlags = "scroll|snap"
+                    >
+                    
+                    <EditText
+                        android:id = "@+id/edit_search"
+                        android:layout_width = "match_parent"
+                        android:layout_height = "wrap_content"
+                        android:background = "@drawable/border_round_trans"
+                        android:hint = "@string/hint_search"
+                        android:inputType = "textUri"
+                        android:maxLines = "1"
+                        android:padding="10dp"
+                        android:textSize = "12sp"
+                        />
+                
+                </android.support.v7.widget.Toolbar>
+                
+                <android.support.design.widget.TabLayout
+                    android:id = "@+id/tab_search"
+                    style = "@style/TabLayout"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    />
+            
+            </android.support.design.widget.AppBarLayout>
+            
+            
+            <android.support.v4.view.ViewPager
+                android:id = "@+id/vp_search"
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                app:layout_behavior = "@string/appbar_scrolling_view_behavior"
+                />
+        
+        </android.support.design.widget.CoordinatorLayout>
+    
+</layout>
