@@ -7,36 +7,36 @@
     
     <android.support.constraint.ConstraintLayout
         android:layout_width = "match_parent"
-        android:layout_height = "50dp"
+        android:layout_height = "40dp"
         android:background = "@android:color/white"
         android:paddingEnd = "@dimen/item_default_margin"
         android:paddingStart = "@dimen/item_default_margin"
         >
         
         <TextView
-            android:id = "@+id/text_pop_num"
+            android:id = "@+id/text_hall_num"
             android:layout_width = "wrap_content"
-            android:fontFamily="@font/nanum_gothic_bold"
             android:layout_height = "wrap_content"
+            android:fontFamily = "@font/nanum_gothic_bold"
             android:textColor = "@color/colorPrimary"
-            android:textSize = "12sp"
-            android:text="4"
+            android:textSize = "13sp"
+            android:text="1"
             app:layout_constraintBottom_toBottomOf = "parent"
             app:layout_constraintStart_toStartOf = "parent"
             app:layout_constraintTop_toTopOf = "parent"
             />
         
         <TextView
-            android:id = "@+id/text_pop_keyword"
+            android:id = "@+id/text_hall_name"
             android:layout_width = "0dp"
             android:layout_height = "wrap_content"
-            android:layout_marginStart = "20dp"
+            android:layout_marginStart = "10dp"
             android:textColor = "@color/colorFadeBlack"
-            android:textSize = "12sp"
-            android:text="dfasdfasdf"
-            app:layout_constraintBottom_toBottomOf = "@+id/text_pop_num"
-            app:layout_constraintStart_toEndOf = "@+id/text_pop_num"
-            app:layout_constraintTop_toTopOf = "@+id/text_pop_num"
+            android:textSize = "13sp"
+            android:text="세종문화회관"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/text_hall_num"
             />
     
     

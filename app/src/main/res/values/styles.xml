@@ -11,12 +11,19 @@
         <item name = "colorAccent">@color/colorPrimary</item>
     </style>
     
+    
     <style name = "TextViewStyle" parent="android:Widget.TextView">
         <item name = "android:fontFamily">@font/nanum_gothic</item>
     </style>
     
+    <style name = "ToolbarDefault">
+        <item name = "android:background">@android:color/white</item>
+        <item name = "titleTextAppearance">@style/ToolbarTitle</item>
+        <item name = "android:layout_height">?android:attr/actionBarSize</item>
+    </style>
+    
     <style name = "ToolbarTitle">
-        <item name = "android:textSize">20dp</item>
+        <item name = "android:textSize">15dp</item>
         <item name = "android:textColor">@color/colorFadeBlack</item>
         <item name = "android:fontFamily">@font/nanum_gothic_bold</item>
     </style>
