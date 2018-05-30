@@ -46,6 +46,8 @@ dependencies {
 
     compile 'com.github.clans:fab:1.6.4'
     compile 'com.ramotion.foldingcell:folding-cell:1.2.2'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    compile 'com.moxun:tagcloudlib:1.2.0'
 
     implementation "android.arch.lifecycle:extensions:$lifecycle_version"
 

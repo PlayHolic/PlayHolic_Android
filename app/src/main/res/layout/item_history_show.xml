@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    >
+    
+    <android.support.constraint.ConstraintLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "45dp"
+        android:background = "@android:color/white"
+        android:paddingEnd = "@dimen/item_default_margin"
+        android:paddingStart = "@dimen/item_default_margin"
+        android:paddingTop = "4dp"
+        >
+        
+        <TextView
+            android:id = "@+id/text_show_num"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:fontFamily = "@font/nanum_gothic_bold"
+            android:textColor = "@color/colorPrimary"
+            android:textSize = "13sp"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            />
+        
+        <TextView
+            android:id = "@+id/text_show_title"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_marginStart = "10dp"
+            android:textColor = "@color/colorFadeBlack"
+            android:textSize = "13sp"
+            app:layout_constraintStart_toEndOf = "@+id/text_show_num"
+            app:layout_constraintTop_toTopOf = "parent"
+            />
+        
+        <TextView
+            android:id = "@+id/text_show_cnt"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:textColor = "@color/colorPrimary"
+            android:textSize = "12sp"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintStart_toStartOf = "@+id/text_show_title"
+            app:layout_constraintTop_toBottomOf = "@+id/text_show_title"
+            />
+        
+        <ImageView
+            android:id = "@+id/img_show_poster"
+            android:layout_width = "0dp"
+            android:layout_height = "0dp"
+            android:background = "@color/colorFadeBlack"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintDimensionRatio = "1:1"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            />
+    
+    </android.support.constraint.ConstraintLayout>
+</layout>

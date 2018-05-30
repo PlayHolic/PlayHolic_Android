@@ -7,4 +7,6 @@
     <color name = "colorFadeBlack">#222222</color>
     <color name = "colorWarmGray">#999999</color>
     <color name = "colorDarkWhite">#E0E0E0</color>
+    <color name = "colorDefaultBackground">#F7F7F7</color>
+    <color name = "colorVaguePrimary">#997540EE</color>
 </resources>

@@ -24,4 +24,7 @@
     <!--wish list-->
     <string name = "release_wish">위시리스트 해제</string>
     <string name = "add_ticket">티켓 추가</string>
+    
+    <!--history-->
+    <string name = "histroy">히스토리</string>
 </resources>
