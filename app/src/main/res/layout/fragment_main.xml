@@ -11,10 +11,14 @@
         android:background = "@color/colorDefaultBackground"
         >
         
-        <include
+        <android.support.v7.widget.Toolbar
             android:id = "@+id/toolbar"
-            layout = "@layout/toolbar_main"
-            />
+            style = "@style/ToolbarDefault"
+            android:layout_width = "match_parent"
+            android:background = "@android:color/white"
+            app:title = "@string/app_name"
+            >
+        </android.support.v7.widget.Toolbar>
         
         <android.support.v7.widget.RecyclerView
             android:id = "@+id/recycler_bucket"
@@ -32,7 +36,7 @@
             android:layout_height = "wrap_content"
             android:layout_margin = "@dimen/item_default_margin"
             android:text = "@string/my_ticket"
-            android:textColor = "@color/colorFadeBlack"
+            android:fontFamily="@font/nanum_gothic_bold"
             android:textSize = "16sp"
             app:layout_constraintStart_toStartOf = "parent"
             app:layout_constraintTop_toBottomOf = "@+id/recycler_bucket"
@@ -80,11 +84,11 @@
             app:layout_constraintStart_toStartOf = "@+id/text_main_title"
             app:layout_constraintTop_toBottomOf = "@+id/text_main_title"
             />
-            
+        
         <include
             android:id = "@+id/float_main"
             layout = "@layout/floating_main"
             />
-        
+    
     </android.support.constraint.ConstraintLayout>
 </layout>
