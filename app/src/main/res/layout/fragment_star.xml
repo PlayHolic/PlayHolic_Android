@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    >
+    
+    <android.support.constraint.ConstraintLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        >
+        
+        <include
+            android:id = "@+id/toolbar"
+            layout = "@layout/toolbar_sub"
+            />
+        
+        <TextView
+            android:id = "@+id/text_star_yet"
+            android:layout_width = "0dp"
+            android:padding="12dp"
+            android:layout_marginTop="2dp"
+            android:background="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height = "wrap_content"
+            android:fontFamily = "@font/nanum_gothic_bold"
+            android:text = "@string/yet_star"
+            android:textSize = "14sp"
+            app:layout_constraintTop_toBottomOf = "@+id/toolbar"
+            />
+    
+        <TextView
+            android:id = "@+id/text_star_title"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_margin = "@dimen/item_default_margin"
+            android:text = "@string/my_star"
+            android:fontFamily="@font/nanum_gothic_bold"
+            android:textSize = "16sp"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toBottomOf = "@+id/text_star_yet"
+            />
+    
+        <TextView
+            android:id = "@+id/text_star_count"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:background = "@drawable/border_rec_gray"
+            android:padding = "2dp"
+            android:textColor = "@color/colorWarmGray"
+            android:textSize = "12sp"
+            app:layout_constraintBottom_toBottomOf = "@+id/text_star_title"
+            app:layout_constraintStart_toEndOf = "@+id/text_star_title"
+            />
+        
+    
+    </android.support.constraint.ConstraintLayout>
+</layout>

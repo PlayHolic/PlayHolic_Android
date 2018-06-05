@@ -14,6 +14,7 @@
     
     <style name = "TextViewStyle" parent="android:Widget.TextView">
         <item name = "android:fontFamily">@font/nanum_gothic</item>
+        <item name = "android:textColor">@color/colorFadeBlack</item>
     </style>
     
     <style name = "ToolbarDefault">
@@ -62,4 +63,10 @@
         <item name = "tabIndicatorColor">@color/colorPrimary</item>
     </style>
 
+    <style name = "TextCount">
+        <item name = "android:fontFamily">@font/nanum_gothic_bold</item>
+        <item name = "android:textColor">@color/colorPrimary</item>
+        <item name = "android:layout_width">wrap_content</item>
+        <item name = "android:layout_height">wrap_content</item>
+    </style>
 </resources>

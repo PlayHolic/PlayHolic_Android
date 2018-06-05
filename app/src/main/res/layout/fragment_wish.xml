@@ -9,22 +9,11 @@
         android:layout_height = "match_parent"
         >
         
-        <android.support.v7.widget.Toolbar
+        <include
             android:id = "@+id/toolbar"
-            style = "@style/ToolbarDefault"
-            android:layout_width = "0dp"
-            app:title = "@string/wish"
-            >
-            
-            <TextView
-                android:id = "@+id/text_tool_cnt"
-                android:layout_width = "wrap_content"
-                android:layout_height = "wrap_content"
-                android:textColor = "@color/colorPrimary"
-                
-                />
+            layout = "@layout/toolbar_sub"
+            />
         
-        </android.support.v7.widget.Toolbar>
         
         <android.support.v7.widget.RecyclerView
             android:id = "@+id/recycler_wish"
