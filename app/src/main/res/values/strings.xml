@@ -27,4 +27,8 @@
     
     <!--history-->
     <string name = "histroy">히스토리</string>
+    
+    <!--star-->
+        <string name = "yet_star">밀린 별점</string>
+    <string name = "my_star">MY별점</string>
 </resources>
