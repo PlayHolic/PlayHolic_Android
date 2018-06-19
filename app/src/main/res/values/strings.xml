@@ -29,6 +29,10 @@
     <string name = "histroy">히스토리</string>
     
     <!--star-->
-        <string name = "yet_star">밀린 별점</string>
+    <string name = "yet_star">밀린 별점</string>
     <string name = "my_star">MY별점</string>
+    
+    <!--comment-->
+    <string name = "yet_comment">밀린 코멘트</string>
+    <string name = "my_comment">MY코멘트</string>
 </resources>
