@@ -4,18 +4,18 @@
     xmlns:app = "http://schemas.android.com/apk/res-auto"
     >
     
-    
     <android.support.constraint.ConstraintLayout
         android:layout_width = "match_parent"
         android:layout_height = "60dp"
-        android:layout_marginBottom="0.5dp"
-        android:padding = "@dimen/item_default_margin"
+        android:layout_marginBottom = "0.5dp"
+        android:background = "@android:color/white"
         >
         
         <ImageView
-            android:id = "@+id/img_star_yet_poster"
+            android:id = "@+id/img_yet_poster"
             android:layout_width = "0dp"
             android:layout_height = "0dp"
+            android:layout_margin = "@dimen/item_default_margin"
             app:layout_constraintBottom_toBottomOf = "parent"
             app:layout_constraintDimensionRatio = "1:1"
             app:layout_constraintStart_toStartOf = "parent"
@@ -23,27 +23,41 @@
             />
         
         <TextView
-            android:id = "@+id/text_star_yet_title"
+            android:id = "@+id/text_yet_title"
             android:layout_width = "0dp"
             android:layout_height = "wrap_content"
             android:layout_marginStart = "11dp"
             android:fontFamily = "@font/nanum_gothic_bold"
-            android:gravity = "left"
+            android:gravity = "start"
             android:textSize = "12sp"
-            app:layout_constraintEnd_toEndOf = "parent"
-            app:layout_constraintStart_toEndOf = "@+id/img_star_yet_poster"
-            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintEnd_toStartOf = "@+id/img_yet_delete"
+            app:layout_constraintStart_toEndOf = "@+id/img_yet_poster"
+            app:layout_constraintTop_toTopOf="@+id/img_yet_poster"
             />
         
         <TextView
-            android:id = "@+id/text_star_yet_date"
+            android:id = "@+id/text_yet_date"
             android:layout_width = "0dp"
             android:layout_height = "wrap_content"
             android:textSize = "12sp"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "@+id/text_yet_title"
+            app:layout_constraintStart_toStartOf = "@+id/text_yet_title"
+            app:layout_constraintTop_toBottomOf = "@+id/text_yet_title"
+            />
+        
+        <ImageButton
+            android:id = "@+id/img_yet_delete"
+            android:layout_width = "42dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_delete"
+            android:scaleType="center"
+            android:layout_height = "0dp"
+            android:background = "@color/colorPrimary"
             app:layout_constraintBottom_toBottomOf = "parent"
             app:layout_constraintEnd_toEndOf = "parent"
-            app:layout_constraintStart_toStartOf = "@+id/text_star_yet_title"
-            app:layout_constraintTop_toBottomOf = "@+id/text_star_yet_title"
+            app:layout_constraintTop_toTopOf = "parent"
             />
     
     </android.support.constraint.ConstraintLayout>
