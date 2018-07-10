@@ -39,7 +39,6 @@
             android:layout_height = "wrap_content"
             android:layout_marginStart = "@dimen/item_default_margin"
             android:layout_marginTop = "@dimen/item_default_margin"
-            android:textSize = "13sp"
             app:layout_constraintStart_toEndOf = "@+id/img_ticket_top_poster"
             app:layout_constraintTop_toTopOf = "parent"
             />
@@ -49,7 +48,6 @@
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
             android:layout_marginTop = "@dimen/margin_ten"
-            android:textSize = "13sp"
             app:layout_constraintStart_toStartOf = "@+id/text_ticket_top_title"
             app:layout_constraintTop_toBottomOf = "@+id/text_ticket_top_title"
             />
@@ -58,7 +56,6 @@
             android:id = "@+id/text_ticket_top_location"
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
-            android:textSize = "13sp"
             app:layout_constraintStart_toStartOf = "@+id/text_ticket_top_title"
             app:layout_constraintTop_toBottomOf = "@+id/text_ticket_top_date"
             />

@@ -15,7 +15,7 @@
         parent = "android:Widget.TextView">
         <item name = "android:fontFamily">@font/nanum_gothic</item>
         <item name = "android:textColor">@color/colorFadeBlack</item>
-        <item name = "android:textSize">12sp</item>
+        <item name = "android:textSize">13sp</item>
     </style>
     
     <style name = "ToolbarDefault">
@@ -93,14 +93,12 @@
         <item name = "android:layout_height">wrap_content</item>
         <item name = "android:layout_width">wrap_content</item>
         <item name = "android:fontFamily">@font/nanum_gothic_bold</item>
-        <item name = "android:textSize">13sp</item>
         <item name = "android:layout_marginBottom">@dimen/margin_ten</item>
     </style>
     
     <style name = "SpecificContent">
         <item name = "android:layout_height">wrap_content</item>
         <item name = "android:layout_width">wrap_content</item>
-        <item name = "android:textSize">13sp</item>
         <item name = "android:layout_marginBottom">20dp</item>
     </style>
     

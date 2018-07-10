@@ -48,7 +48,6 @@
                 android:layout_height = "wrap_content"
                 android:layout_marginTop = "12dp"
                 android:fontFamily = "@font/nanum_gothic_bold"
-                android:textSize = "13sp"
                 app:layout_constraintStart_toStartOf = "@+id/text_seen_date"
                 app:layout_constraintTop_toBottomOf = "@+id/view_seen_line"
                 />

@@ -61,7 +61,6 @@
                 android:layout_width = "wrap_content"
                 android:layout_height = "wrap_content"
                 android:textColor = "@android:color/white"
-                android:textSize = "13sp"
                 app:layout_constraintBottom_toTopOf = "@+id/text_ticket_bottom_location"
                 app:layout_constraintStart_toStartOf = "@+id/text_ticket_bottom_title"
                 />
@@ -72,7 +71,6 @@
                 android:layout_height = "wrap_content"
                 android:layout_marginBottom = "@dimen/margin_ten"
                 android:textColor = "@android:color/white"
-                android:textSize = "13sp"
                 app:layout_constraintBottom_toBottomOf = "@+id/img_ticket_bottom_poster"
                 app:layout_constraintStart_toStartOf = "@+id/text_ticket_bottom_title"
                 />

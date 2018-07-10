@@ -18,7 +18,6 @@
             android:gravity = "center"
             android:padding = "@dimen/item_default_margin"
             android:textColor = "@color/colorWarmGray"
-            android:textSize = "13sp"
             app:layout_constraintBottom_toBottomOf = "parent"
             app:layout_constraintEnd_toEndOf = "parent"
             app:layout_constraintStart_toStartOf = "parent"
