@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name = "item_default_margin">15dp</dimen>
+    <dimen name = "item_default_margin">14dp</dimen>
+    <dimen name = "margin_ten">10dp</dimen>
+    <dimen name = "padding_drawable">5dp</dimen>
 </resources>
