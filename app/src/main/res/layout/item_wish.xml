@@ -25,7 +25,6 @@
                 android:fontFamily = "@font/nanum_gothic_bold"
                 android:text = "가가"
                 android:layout_marginStart="@dimen/item_default_margin"
-                android:textSize = "13sp"
                 app:layout_constraintStart_toStartOf = "parent"
                 app:layout_constraintTop_toTopOf = "parent"
                 />
@@ -36,7 +35,6 @@
                 android:layout_height = "wrap_content"
                 android:layout_marginTop = "@dimen/margin_ten"
                 android:text = "2018.03.16~"
-                android:textSize = "13sp"
                 app:layout_constraintStart_toStartOf="@+id/text_wish_title"
                 app:layout_constraintTop_toBottomOf = "@+id/text_wish_title"
                 />
@@ -47,7 +45,6 @@
                 android:layout_height = "wrap_content"
                 android:text = "대학로"
                 app:layout_constraintStart_toStartOf="@+id/text_wish_title"
-                android:textSize = "13sp"
                 app:layout_constraintTop_toBottomOf = "@+id/text_wish_date"
                 />
             

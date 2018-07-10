@@ -181,7 +181,6 @@
             android:gravity = "start|center_vertical"
             android:padding = "@dimen/item_default_margin"
             android:text = "@string/my_seen"
-            android:textSize = "13sp"
             app:layout_constraintBottom_toBottomOf = "parent"
             app:layout_constraintEnd_toEndOf = "parent"
             app:layout_constraintStart_toStartOf = "parent"

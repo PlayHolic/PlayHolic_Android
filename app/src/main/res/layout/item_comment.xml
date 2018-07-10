@@ -18,7 +18,6 @@
             android:layout_height = "wrap_content"
             android:fontFamily = "@font/nanum_gothic_bold"
             android:maxLines = "1"
-            android:textSize = "13sp"
             app:layout_constraintEnd_toEndOf = "parent"
             app:layout_constraintStart_toStartOf = "parent"
             app:layout_constraintTop_toTopOf = "parent"
