@@ -60,7 +60,7 @@
             android:layout_height = "wrap_content"
             android:layout_marginEnd = "@dimen/item_default_margin"
             android:background = "@drawable/border_round_purple"
-            android:drawableEnd = "@drawable/ic_chevron_right_black_24dp"
+            android:drawableEnd = "@drawable/ic_chevron_right_primary_24dp"
             android:gravity = "center"
             android:paddingBottom = "3dp"
             android:paddingEnd = "3dp"
