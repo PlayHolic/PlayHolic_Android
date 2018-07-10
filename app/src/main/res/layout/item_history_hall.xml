@@ -29,7 +29,7 @@
             android:id = "@+id/text_hall_name"
             android:layout_width = "0dp"
             android:layout_height = "wrap_content"
-            android:layout_marginStart = "10dp"
+            android:layout_marginStart = "@dimen/margin_ten"
             android:textSize = "13sp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
