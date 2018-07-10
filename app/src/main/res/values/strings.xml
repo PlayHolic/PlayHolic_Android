@@ -26,13 +26,21 @@
     <string name = "add_ticket">티켓 추가</string>
     
     <!--history-->
-    <string name = "histroy">히스토리</string>
+    <string name = "history">히스토리</string>
     
     <!--star-->
     <string name = "yet_star">밀린 별점</string>
-    <string name = "my_star">MY별점</string>
+    <string name = "my_star">MY 별점</string>
     
     <!--comment-->
     <string name = "yet_comment">밀린 코멘트</string>
-    <string name = "my_comment">MY코멘트</string>
+    <string name = "my_comment">MY 코멘트</string>
+    
+    <!--specific-->
+    <string name = "my_seen">MY 관람내역</string>
+    <string name = "done_comment">코멘트완료</string>
+    <string name = "add_wish">위시리스트 담기</string>
+    <string name = "running">러닝타임</string>
+    <string name = "producer">제작사</string>
+
 </resources>

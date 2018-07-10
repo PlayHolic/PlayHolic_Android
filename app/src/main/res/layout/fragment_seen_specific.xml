@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    >
+    
+    <android.support.constraint.ConstraintLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        android:background = "@color/colorDefaultBackground"
+        >
+        
+        <android.support.v7.widget.CardView
+            android:id = "@+id/card_spe"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            app:cardElevation = "0.5dp"
+            >
+            
+            <android.support.constraint.ConstraintLayout
+                android:layout_width = "match_parent"
+                android:layout_height = "wrap_content"
+                >
+                
+                <ImageView
+                    android:id = "@+id/img_spe_poster"
+                    android:layout_width = "0dp"
+                    android:layout_height = "0dp"
+                    app:layout_constraintDimensionRatio = "5:2"
+                    app:layout_constraintEnd_toEndOf = "parent"
+                    app:layout_constraintStart_toStartOf = "parent"
+                    app:layout_constraintTop_toTopOf = "parent"
+                    />
+                
+                <TextView
+                    android:id = "@+id/text_spe_title"
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    android:layout_margin = "@dimen/item_default_margin"
+                    android:drawablePadding = "12dp"
+                    android:drawableStart = "@drawable/ic_navigate_before_white_24dp"
+                    android:fontFamily = "@font/nanum_gothic_bold"
+                    android:textColor = "@android:color/white"
+                    android:textSize = "15sp"
+                    app:layout_constraintStart_toStartOf = "parent"
+                    app:layout_constraintTop_toTopOf = "parent"
+                    />
+                
+                <TextView
+                    android:id = "@+id/text_spe_date"
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    android:textColor = "@android:color/white"
+                    android:textSize = "16sp"
+                    app:layout_constraintBottom_toTopOf = "@+id/text_spe_locate"
+                    app:layout_constraintStart_toStartOf = "@+id/text_spe_title"
+                    />
+                
+                <TextView
+                    android:id = "@+id/text_spe_locate"
+                    android:layout_width = "wrap_content"
+                    android:layout_height = "wrap_content"
+                    android:layout_marginBottom = "@dimen/item_default_margin"
+                    android:textColor = "@android:color/white"
+                    android:textSize = "16sp"
+                    app:layout_constraintBottom_toBottomOf = "@+id/img_spe_poster"
+                    app:layout_constraintStart_toStartOf = "@+id/text_spe_title"
+                    />
+                
+                <Button
+                    android:id = "@+id/btn_spe_wish"
+                    style = "@style/SpecificBtn"
+                    android:text = "@string/add_wish"
+                    app:layout_constraintEnd_toStartOf = "@+id/view_spe_line"
+                    app:layout_constraintHorizontal_chainStyle = "spread"
+                    app:layout_constraintStart_toStartOf = "parent"
+                    app:layout_constraintTop_toBottomOf = "@+id/img_spe_poster"
+                    />
+                
+                <View
+                    android:id = "@+id/view_spe_line"
+                    android:layout_width = "0.5dp"
+                    android:layout_height = "0dp"
+                    android:layout_marginBottom = "13dp"
+                    android:layout_marginTop = "13dp"
+                    android:background = "@color/colorDarkWhite"
+                    app:layout_constraintBottom_toBottomOf = "@+id/btn_spe_wish"
+                    app:layout_constraintEnd_toStartOf = "@+id/btn_spe_ticket"
+                    app:layout_constraintStart_toEndOf = "@+id/btn_spe_wish"
+                    app:layout_constraintTop_toBottomOf = "@+id/img_spe_poster"
+                    />
+                
+                <Button
+                    android:id = "@+id/btn_spe_ticket"
+                    style = "@style/SpecificBtn"
+                    android:text = "@string/add_ticket"
+                    app:layout_constraintEnd_toEndOf = "parent"
+                    app:layout_constraintStart_toEndOf = "@+id/view_spe_line"
+                    app:layout_constraintTop_toBottomOf = "@+id/img_spe_poster"
+                    />
+            
+            </android.support.constraint.ConstraintLayout>
+        
+        </android.support.v7.widget.CardView>
+        
+        
+        <GridLayout
+            android:id = "@+id/grid_spe"
+            android:layout_width = "match_parent"
+            android:layout_height = "0dp"
+            android:layout_marginTop = "12dp"
+            android:background = "@drawable/border_rec_darkwhite"
+            android:backgroundTint = "@android:color/white"
+            android:columnCount = "1"
+            android:paddingEnd = "@dimen/item_default_margin"
+            android:paddingStart = "@dimen/item_default_margin"
+            android:paddingTop = "18dp"
+            android:useDefaultMargins = "true"
+            app:layout_constraintTop_toBottomOf = "@+id/card_spe"
+            >
+            
+            <TextView
+                style = "@style/SpecificTitle"
+                android:text = "@string/running"
+                />
+            
+            <TextView
+                android:id = "@+id/text_spe_running"
+                style = "@style/SpecificContent"
+                />
+            
+            <TextView
+                style = "@style/SpecificTitle"
+                android:text = "@string/age"
+                />
+            
+            <TextView
+                android:id = "@+id/text_spe_age"
+                style = "@style/SpecificContent"
+                />
+            
+            <TextView
+                style = "@style/SpecificTitle"
+                android:text = "@string/cast"
+                />
+            
+            <TextView
+                android:id = "@+id/text_spe_cast"
+                style = "@style/SpecificContent"
+                />
+            
+            <TextView
+                style = "@style/SpecificTitle"
+                android:text = "@string/crew"
+                />
+            
+            <TextView
+                android:id = "@+id/text_spe_crew"
+                style = "@style/SpecificContent"
+                />
+            
+            <TextView
+                style = "@style/SpecificTitle"
+                android:text = "@string/producer"
+                />
+            
+            <TextView
+                android:id = "@+id/text_spe_producer"
+                style = "@style/SpecificContent"
+                />
+        </GridLayout>
+        
+        <Button
+            android:id = "@+id/btn_my_seen"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:layout_marginTop = "1dp"
+            android:background = "@android:color/white"
+            android:drawableEnd = "@drawable/ic_keyboard_arrow_up_black_24dp"
+            android:fontFamily = "@font/nanum_gothic_bold"
+            android:gravity = "start|center_vertical"
+            android:padding = "@dimen/item_default_margin"
+            android:text = "@string/my_seen"
+            android:textSize = "13sp"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toBottomOf = "@+id/grid_spe"
+            />
+    
+    
+    </android.support.constraint.ConstraintLayout>
+</layout>
