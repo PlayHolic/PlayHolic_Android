@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto">
+    
+    <android.support.constraint.ConstraintLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        android:paddingStart="@dimen/item_default_margin"
+        android:paddingEnd="@dimen/item_default_margin"
+        android:layout_marginTop="?android:attr/actionBarSize"
+        android:background = "@android:color/white"
+        >
+        
+        <TextView
+            android:id = "@+id/text_cmt_title"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:layout_marginTop = "22dp"
+            android:fontFamily = "@font/nanum_gothic_bold"
+            android:maxLines = "1"
+            android:textSize = "15sp"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        
+        <TextView
+            android:id = "@+id/text_cmt_date"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
+            android:layout_marginTop = "10dp"
+            android:maxLines = "1"
+            android:textColor = "@color/colorWarmGray"
+            app:layout_constraintEnd_toEndOf = "@+id/text_cmt_title"
+            app:layout_constraintStart_toStartOf = "@+id/text_cmt_title"
+            app:layout_constraintTop_toBottomOf = "@+id/text_cmt_title"
+            />
+        
+        <EditText
+            android:id = "@+id/edit_cmt_content"
+            android:layout_width = "0dp"
+            android:layout_height = "0dp"
+            android:background = "@android:color/white"
+            android:focusableInTouchMode = "true"
+            android:fontFamily = "@font/nanum_gothic"
+            android:gravity = "top"
+            android:hint = "@string/hint_comment"
+            android:inputType = "textMultiLine"
+            android:isScrollContainer = "true"
+            android:lineSpacingMultiplier = "1"
+            android:textSize = "13sp"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "@+id/text_cmt_title"
+            app:layout_constraintStart_toStartOf = "@+id/text_cmt_title"
+            app:layout_constraintTop_toBottomOf = "@+id/text_cmt_date"
+            />
+    </android.support.constraint.ConstraintLayout>
+</layout>
