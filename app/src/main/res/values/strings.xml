@@ -35,6 +35,10 @@
     <!--comment-->
     <string name = "yet_comment">밀린 코멘트</string>
     <string name = "my_comment">MY 코멘트</string>
+    <string name = "complete">완료</string>
+    <string name = "hint_comment">이 곳을 눌러 코멘트를 작성해주세요.</string>
+    <string name = "menu_delete">삭제하기</string>
+    <string name = "menu_edit">수정하기</string>
     
     <!--specific-->
     <string name = "my_seen">MY 관람내역</string>
