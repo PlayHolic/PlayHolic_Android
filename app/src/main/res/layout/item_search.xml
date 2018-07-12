@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    >
+    
+    <android.support.constraint.ConstraintLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "90dp"
+        android:background = "@color/colorDefaultBackground"
+        android:paddingBottom = "16dp"
+        android:paddingEnd = "@dimen/item_default_margin"
+        android:paddingStart = "@dimen/item_default_margin"
+        android:paddingTop = "16dp"
+        >
+        
+        <ImageView
+            android:id = "@+id/img_search_poster"
+            android:layout_width = "0dp"
+            android:layout_height = "0dp"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintDimensionRatio = "1:1"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            />
+        
+        <TextView
+            android:id = "@+id/text_search_title"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_marginStart = "@dimen/item_default_margin"
+            android:fontFamily = "@font/nanum_gothic_bold"
+            android:maxLines = "1"
+            app:layout_constraintStart_toEndOf = "@+id/img_search_poster"
+            app:layout_constraintTop_toTopOf = "parent"
+            />
+        
+        <TextView
+            android:id = "@+id/text_search_date"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_marginTop = "8dp"
+            android:textSize = "12sp"
+            app:layout_constraintStart_toStartOf = "@+id/text_search_title"
+            app:layout_constraintTop_toBottomOf = "@+id/text_search_title"
+            />
+        
+        <TextView
+            android:id = "@+id/text_search_locate"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:textSize = "12sp"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintStart_toStartOf = "@+id/text_search_title"
+            app:layout_constraintTop_toBottomOf = "@+id/text_search_date"
+            />
+    
+    </android.support.constraint.ConstraintLayout>
+</layout>
