@@ -52,5 +52,9 @@
     <string name = "account">계정</string>
     <string name = "version">현재 버전</string>
     <string name = "logout">로그아웃</string>
+    
+    <!--menu-->
+    <string name = "menu_my">내정보</string>
+    <string name = "menu_search">검색</string>
 
 </resources>
