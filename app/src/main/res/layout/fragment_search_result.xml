@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    >
+    
+    <android.support.constraint.ConstraintLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        android:background = "@color/colorDefaultBackground"
+        >
+        
+        <TextView
+            android:id = "@+id/text_result_title"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_marginStart = "@dimen/item_default_margin"
+            android:layout_marginTop = "16dp"
+            android:fontFamily = "@font/nanum_gothic_bold"
+            android:text = "@string/search_result"
+            android:textSize = "16sp"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            />
+        
+        <TextView
+            android:id = "@+id/text_result_count"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_marginStart = "5dp"
+            android:background = "@drawable/border_rec_gray"
+            android:padding = "2dp"
+            android:textColor = "@color/colorWarmGray"
+            android:textSize = "12sp"
+            app:layout_constraintBottom_toBottomOf = "@+id/text_result_title"
+            app:layout_constraintStart_toEndOf = "@+id/text_result_title"
+            />
+        
+        <android.support.v7.widget.RecyclerView
+            android:id = "@+id/recycler_result"
+            android:layout_width = "match_parent"
+            android:layout_height = "0dp"
+            android:layout_marginTop = "@dimen/item_default_margin"
+            android:background = "@android:color/white"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toBottomOf = "@+id/text_result_count"
+            app:layout_goneMarginTop = "16dp"
+            />
+    
+    </android.support.constraint.ConstraintLayout>
+</layout>
