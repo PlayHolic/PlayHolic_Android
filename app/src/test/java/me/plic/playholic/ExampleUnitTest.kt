@@ -1,4 +1,4 @@
-package me.plic.playholic_android
+package me.plic.playholic
 
 import org.junit.Test
 
