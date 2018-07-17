@@ -4,6 +4,13 @@
     xmlns:app = "http://schemas.android.com/apk/res-auto"
     >
     
+    <data>
+        
+        <variable
+            name = "viewModel"
+            type = "me.plic.playholic.viewModel.MainFragmentViewModel"
+            />
+    </data>
     
     <android.support.constraint.ConstraintLayout
         android:layout_width = "match_parent"
@@ -61,6 +68,7 @@
             android:background = "@drawable/border_round_purple"
             android:drawableEnd = "@drawable/ic_chevron_right_primary_24dp"
             android:gravity = "center"
+            android:onClick = "@{() -> viewModel.applyFragment()}"
             android:paddingBottom = "3dp"
             android:paddingEnd = "3dp"
             android:paddingStart = "9dp"
