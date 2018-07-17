@@ -33,6 +33,18 @@
         <item name = "android:fontFamily">@font/nanum_gothic_bold</item>
     </style>
     
+    <style name = "ToolbarMain">
+        <item name = "android:background">@android:color/white</item>
+        <item name = "titleTextAppearance">@style/ToolbarMainTitle</item>
+        <item name = "android:layout_height">40dp</item>
+    </style>
+    
+    <style name = "ToolbarMainTitle">
+        <item name = "android:textSize">18sp</item>
+        <item name = "android:textColor">@color/colorFadeBlack</item>
+        <item name = "android:fontFamily">@font/gotham_black</item>
+    </style>
+    
     <style name = "FloatSubButton">
         <item name = "fab_size">mini</item>
         <item name = "fab_colorPressed">@color/colorPrimary</item>

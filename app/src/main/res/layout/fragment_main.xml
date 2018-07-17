@@ -13,12 +13,11 @@
         
         <android.support.v7.widget.Toolbar
             android:id = "@+id/toolbar"
-            style = "@style/ToolbarDefault"
+            style = "@style/ToolbarMain"
             android:layout_width = "match_parent"
             android:background = "@android:color/white"
             app:title = "@string/app_name"
-            >
-        </android.support.v7.widget.Toolbar>
+            />
         
         <android.support.v7.widget.RecyclerView
             android:id = "@+id/recycler_bucket"
