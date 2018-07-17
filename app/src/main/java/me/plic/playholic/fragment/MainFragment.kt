@@ -8,11 +8,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import me.plic.playholic.R
+import me.plic.playholic.common.SwitchScreen
 import me.plic.playholic.databinding.FragmentMainBinding
+import me.plic.playholic.viewModel.MainFragmentViewModel
 
-class MainFragment : Fragment() {
+class MainFragment : Fragment(), SwitchScreen {
 
-    lateinit var binding : FragmentMainBinding
+    lateinit var binding: FragmentMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
