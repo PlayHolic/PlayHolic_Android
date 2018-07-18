@@ -20,7 +20,7 @@
             android:layout_width = "60dp"
             android:layout_height = "60dp"
             android:layout_marginTop = "16dp"
-            android:src = "@mipmap/ic_launcher"
+            android:src = "@drawable/ic_title"
             app:civ_border_color = "@android:color/white"
             app:civ_border_overlay = "true"
             app:civ_border_width = "2dp"
@@ -52,6 +52,7 @@
             <android.support.constraint.ConstraintLayout
                 android:layout_width = "match_parent"
                 android:layout_height = "wrap_content"
+                android:background = "@android:color/white"
                 android:padding = "@dimen/item_default_margin"
                 >
                 
@@ -90,6 +91,7 @@
             <android.support.constraint.ConstraintLayout
                 android:layout_width = "match_parent"
                 android:layout_height = "wrap_content"
+                android:background = "@android:color/white"
                 android:padding = "@dimen/item_default_margin"
                 >
                 
@@ -134,7 +136,6 @@
                     android:id = "@+id/text_logout"
                     android:layout_width = "wrap_content"
                     android:layout_height = "0dp"
-                    android:layout_marginTop = "@dimen/margin_ten"
                     android:fontFamily = "@font/nanum_gothic_bold"
                     android:text = "@string/logout"
                     app:layout_constraintHeight_default = "wrap"
