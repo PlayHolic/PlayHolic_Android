@@ -6,6 +6,11 @@
     
     <data>
         
+        <import
+            alias = "View"
+            type = "android.view.View"
+            />
+        
         <variable
             name = "viewModel"
             type = "me.plic.playholic.viewModel.MainFragmentViewModel"
@@ -29,8 +34,23 @@
         <android.support.v7.widget.RecyclerView
             android:id = "@+id/recycler_bucket"
             android:layout_width = "0dp"
-            android:layout_height = "wrap_content"
-            android:layout_marginTop = "2dp"
+            android:layout_height = "80dp"
+            android:layout_marginTop = "1.3dp"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toBottomOf = "@+id/toolbar"
+            />
+        
+        <!--Visible or not dependence on recycler_bucket's data size-->
+        <TextView
+            android:id = "@+id/text_no_reserve"
+            android:layout_width = "0dp"
+            android:layout_height = "80dp"
+            android:layout_marginTop = "1.3dp"
+            android:background = "@android:color/white"
+            android:gravity = "center"
+            android:text = "@string/no_reservation"
+            android:textSize = "14sp"
             app:layout_constraintEnd_toEndOf = "parent"
             app:layout_constraintStart_toStartOf = "parent"
             app:layout_constraintTop_toBottomOf = "@+id/toolbar"
@@ -89,6 +109,25 @@
             app:layout_constraintBottom_toBottomOf = "parent"
             app:layout_constraintEnd_toEndOf = "@+id/btn_history"
             app:layout_constraintStart_toStartOf = "@+id/text_main_title"
+            app:layout_constraintTop_toBottomOf = "@+id/text_main_title"
+            />
+        
+        <!--Visible or not dependence on recycler_bucket's data size-->
+        <TextView
+            android:id = "@+id/text_no_ticket"
+            android:layout_width = "0dp"
+            android:layout_height = "0dp"
+            android:layout_marginEnd = "@dimen/item_default_margin"
+            android:layout_marginStart = "@dimen/item_default_margin"
+            android:layout_marginTop = "@dimen/default_top_margin"
+            android:gravity = "center"
+            android:lineSpacingExtra = "3dp"
+            android:text = "@string/no_ticket"
+            android:textColor = "@color/colorWarmGray"
+            android:textSize = "13sp"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
             app:layout_constraintTop_toBottomOf = "@+id/text_main_title"
             />
         
