@@ -130,8 +130,8 @@
             />
         
         <include
-            android:id = "@+id/float_main"
-            layout = "@layout/floating_main"
+            android:id = "@+id/fam_main"
+            layout = "@layout/fam_main"
             />
     
     </android.support.constraint.ConstraintLayout>
