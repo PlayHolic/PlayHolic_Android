@@ -7,25 +7,25 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width = "match_parent"
         android:layout_height = "match_parent"
+        android:layout_marginTop = "40dp"
         >
         
         <com.github.clans.fab.FloatingActionMenu
-            android:id = "@+id/float_menu"
-            android:layout_width = "wrap_content"
-            android:layout_height = "wrap_content"
-            android:padding = "16dp"
+            android:id = "@+id/fam"
+            style = "@style/FAMMain"
+            android:layout_width = "0dp"
+            android:layout_height = "0dp"
             app:layout_constraintBottom_toBottomOf = "parent"
             app:layout_constraintEnd_toEndOf = "parent"
-            app:menu_colorNormal = "@color/colorAccent"
-            app:menu_colorPressed = "@color/colorAccent"
-            app:menu_labels_position = "left"
-            app:menu_labels_style = "@style/FloatLabel"
-            app:menu_openDirection = "up"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintTop_toTopOf = "parent"
+            app:menu_labels_margin = "4dp"
+            app:menu_labels_style = "@style/LabelFABMain"
             >
             
             <com.github.clans.fab.FloatingActionButton
-                android:id = "@+id/float_wish"
-                style = "@style/FloatSubButton"
+                android:id = "@+id/fab_wish"
+                style = "@style/FABMain"
                 android:layout_width = "wrap_content"
                 android:layout_height = "wrap_content"
                 android:src = "@drawable/ic_wishlist_w"
@@ -33,8 +33,8 @@
                 />
             
             <com.github.clans.fab.FloatingActionButton
-                android:id = "@+id/float_star"
-                style = "@style/FloatSubButton"
+                android:id = "@+id/fab_star"
+                style = "@style/FABMain"
                 android:layout_width = "wrap_content"
                 android:layout_height = "wrap_content"
                 android:src = "@drawable/ic_star_w"
@@ -42,8 +42,8 @@
                 />
             
             <com.github.clans.fab.FloatingActionButton
-                android:id = "@+id/float_comment"
-                style = "@style/FloatSubButton"
+                android:id = "@+id/fab_comment"
+                style = "@style/FABMain"
                 android:layout_width = "wrap_content"
                 android:layout_height = "wrap_content"
                 android:src = "@drawable/ic_write_w"

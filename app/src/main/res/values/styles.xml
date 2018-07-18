@@ -40,25 +40,37 @@
     </style>
     
     <style name = "ToolbarMainTitle">
-        <item name = "android:textSize">18sp</item>
+        <item name = "android:textSize">20sp</item>
+        <item name = "android:gravity">center_vertical</item>
         <item name = "android:textColor">@color/colorFadeBlack</item>
         <item name = "android:fontFamily">@font/gotham_black</item>
     </style>
     
-    <style name = "FloatSubButton">
+    <style name = "FAMMain">
+        <item name = "menu_colorNormal">@color/colorPrimary</item>
+        <item name = "menu_colorPressed">@color/colorPrimary</item>
+        <item name = "android:padding">@dimen/default_top_margin</item>
+        <item name = "menu_backgroundColor">#b8f7f7f7</item>
+        <item name = "menu_openDirection">up</item>
+        <item name = "menu_shadowColor">#80999999</item>
+    </style>
+    
+    <style name = "FABMain">
         <item name = "fab_size">mini</item>
+        <item name = "fab_shadowColor">#80999999</item>
         <item name = "fab_colorPressed">@color/colorPrimary</item>
         <item name = "fab_colorNormal">@color/colorPrimary</item>
         <item name = "android:scaleType">centerInside</item>
     </style>
     
-    <style name = "FloatLabel">
+    <style name = "LabelFABMain">
         <item name = "android:textSize">12sp</item>
         <item name = "android:paddingEnd">6dp</item>
+        <item name = "android:fontFamily">@font/nanum_gothic</item>
         <item name = "android:gravity">center</item>
         <item name = "android:paddingStart">6dp</item>
         <item name = "android:paddingBottom">3dp</item>
-        <item name = "android:paddingTop">2dp</item>
+        <item name = "android:paddingTop">3dp</item>
         <item name = "android:textColor">@color/colorPrimary</item>
         <item name = "android:background">@drawable/border_round_purple</item>
     </style>
@@ -88,6 +100,7 @@
         <item name = "tabIndicatorColor">@color/colorPrimary</item>
     </style>
     
+    <!--Same with TextSquareCount-->
     <style name = "TextCount">
         <item name = "android:fontFamily">@font/nanum_gothic_bold</item>
         <item name = "android:textColor">@color/colorPrimary</item>
@@ -125,5 +138,15 @@
         <item name ="android:background">@android:color/white</item>
         <item name="cardElevation">0.8dp</item>
         <item name = "android:layout_height">wrap_content</item>
+    </style>
+    
+    <style name = "TextSquareCount">
+        <item name = "android:defaultValue">@string/zero</item>
+        <item name = "android:gravity">center</item>
+        <item name = "android:textColor">@color/colorWarmGray</item>
+        <item name = "android:textSize">11sp</item>
+        <item name = "android:layout_marginStart">5dp</item>
+        <item name = "android:background">@drawable/border_rec_gray</item>
+        <item name = "android:padding">3dp</item>
     </style>
 </resources>

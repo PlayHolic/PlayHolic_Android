@@ -1,8 +1,12 @@
 <resources>
     <string name = "app_name">PLIC</string>
     
+    <!--main-->
     <string name = "my_ticket">MY티켓</string>
     <string name = "go_history">히스토리 보러가기</string>
+    <string name = "no_reservation">관람예정인 공연이 없습니다.</string>
+    <string name = "no_ticket">우측 상단의 검색 아이콘을 눌러 관람작품을 검색한 후 \n티켓에 추가해주세요.</string>
+    <string name = "zero">0</string>
     
     <string name = "go_star">별점매기기</string>
     <string name = "go_comment">코멘트쓰기</string>
