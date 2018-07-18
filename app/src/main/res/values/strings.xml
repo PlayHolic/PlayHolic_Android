@@ -58,7 +58,7 @@
     <string name = "logout">로그아웃</string>
     
     <!--menu-->
-    <string name = "menu_my">내정보</string>
+    <string name = "menu_my">내 정보</string>
     <string name = "menu_search">검색</string>
 
 </resources>

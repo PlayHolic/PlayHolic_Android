@@ -5,7 +5,7 @@
         parent = "Theme.AppCompat.Light.NoActionBar">
         <item name = "toolbarSize">40dp</item>
         <item name = "android:textViewStyle">@style/TextViewStyle</item>
-        <item name = "android:homeAsUpIndicator">@drawable/ic_navigate_before_warmgray_24dp</item>
+        <item name = "android:homeAsUpIndicator">@drawable/ic_back</item>
         <item name = "colorPrimary">@color/colorPrimary</item>
         <item name = "colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name = "colorAccent">@color/colorPrimary</item>
@@ -23,6 +23,7 @@
     </style>
     
     <style name = "ToolbarDefault">
+        <item name = "contentInsetStartWithNavigation">0dp</item>
         <item name = "android:background">@android:color/white</item>
         <item name = "titleTextAppearance">@style/ToolbarTitle</item>
         <item name = "android:layout_height">?attr/toolbarSize</item>
