@@ -60,7 +60,8 @@
             android:id = "@+id/text_main_title"
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
-            android:layout_margin = "@dimen/item_default_margin"
+            android:layout_marginStart = "@dimen/item_default_margin"
+            android:layout_marginTop = "@dimen/default_top_margin"
             android:text = "@string/my_ticket"
             android:fontFamily="@font/nanum_gothic_bold"
             android:textSize = "16sp"
@@ -70,12 +71,9 @@
         
         <TextView
             android:id = "@+id/text_main_count"
+            style = "@style/TextSquareCount"
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
-            android:background = "@drawable/border_rec_gray"
-            android:padding = "2dp"
-            android:textColor = "@color/colorWarmGray"
-            android:textSize = "12sp"
             app:layout_constraintBottom_toBottomOf = "@+id/text_main_title"
             app:layout_constraintStart_toEndOf = "@+id/text_main_title"
             />
@@ -105,7 +103,7 @@
             android:id = "@+id/recycler_ticket"
             android:layout_width = "0dp"
             android:layout_height = "0dp"
-            android:layout_marginTop = "@dimen/item_default_margin"
+            android:layout_marginTop = "@dimen/default_top_margin"
             app:layout_constraintBottom_toBottomOf = "parent"
             app:layout_constraintEnd_toEndOf = "@+id/btn_history"
             app:layout_constraintStart_toStartOf = "@+id/text_main_title"

@@ -88,6 +88,7 @@
         <item name = "tabIndicatorColor">@color/colorPrimary</item>
     </style>
     
+    <!--Same with TextSquareCount-->
     <style name = "TextCount">
         <item name = "android:fontFamily">@font/nanum_gothic_bold</item>
         <item name = "android:textColor">@color/colorPrimary</item>
@@ -125,5 +126,15 @@
         <item name ="android:background">@android:color/white</item>
         <item name="cardElevation">0.8dp</item>
         <item name = "android:layout_height">wrap_content</item>
+    </style>
+    
+    <style name = "TextSquareCount">
+        <item name = "android:defaultValue">@string/zero</item>
+        <item name = "android:gravity">center</item>
+        <item name = "android:textColor">@color/colorWarmGray</item>
+        <item name = "android:textSize">11sp</item>
+        <item name = "android:layout_marginStart">5dp</item>
+        <item name = "android:background">@drawable/border_rec_gray</item>
+        <item name = "android:padding">3dp</item>
     </style>
 </resources>
