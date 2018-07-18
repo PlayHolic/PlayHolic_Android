@@ -4,10 +4,9 @@ import android.arch.lifecycle.ViewModelProviders
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import me.plic.playholic.R
+import me.plic.playholic.activity.MainActivity
 import me.plic.playholic.common.SwitchScreen
 import me.plic.playholic.databinding.FragmentMainBinding
 import me.plic.playholic.viewModel.MainFragmentViewModel
@@ -16,8 +15,17 @@ class MainFragment : Fragment(), SwitchScreen {
 
     lateinit var binding: FragmentMainBinding
 
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        setHasOptionsMenu(true)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
+        inflater?.inflate(R.menu.menu_main, menu)
+
+        super.onCreateOptionsMenu(menu, inflater)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -29,7 +37,13 @@ class MainFragment : Fragment(), SwitchScreen {
                     switchScreen = this@MainFragment
                 }
 
+        initToolbar()
+
         return binding.root
+    }
+
+    private fun initToolbar() {
+        (activity as MainActivity).setSupportActionBar(binding.toolbar)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
