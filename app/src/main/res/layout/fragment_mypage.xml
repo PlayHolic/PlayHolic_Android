@@ -32,7 +32,11 @@
         <TextView
             android:id = "@+id/text_my_name"
             android:layout_width = "0dp"
+            android:gravity="center"
+            android:text="@string/app_name"
             android:layout_height = "wrap_content"
+            android:layout_marginEnd = "@dimen/item_default_margin"
+            android:layout_marginStart = "@dimen/item_default_margin"
             android:layout_marginTop = "@dimen/margin_ten"
             app:layout_constraintEnd_toEndOf = "parent"
             app:layout_constraintStart_toStartOf = "parent"
