@@ -4,10 +4,9 @@
     xmlns:app = "http://schemas.android.com/apk/res-auto"
     >
     
-    
     <android.support.constraint.ConstraintLayout
         android:layout_width = "match_parent"
-        android:layout_height = "80dp"
+        android:layout_height = "76dp"
         android:background = "@android:color/white"
         android:padding = "@dimen/item_default_margin"
         >
@@ -17,9 +16,12 @@
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
             android:background = "@drawable/border_round_purple"
+            android:gravity = "center"
             android:maxLines = "1"
-            android:paddingEnd = "9dp"
-            android:paddingStart = "9dp"
+            android:paddingBottom = "1dp"
+            android:paddingEnd = "6dp"
+            android:paddingStart = "6dp"
+            android:paddingTop = "1dp"
             android:textColor = "@color/colorPrimary"
             android:textSize = "12sp"
             app:layout_constraintStart_toStartOf = "parent"
@@ -30,7 +32,8 @@
             android:id = "@+id/text_bucket_title"
             android:layout_width = "0dp"
             android:layout_height = "wrap_content"
-            android:layout_marginStart = "6dp"
+            android:layout_marginStart = "8dp"
+            android:fontFamily = "@font/nanum_gothic_bold"
             android:maxLines = "1"
             android:textSize = "14sp"
             app:layout_constraintBottom_toBottomOf = "@+id/text_bucket_day"
@@ -52,7 +55,7 @@
         
         <View
             android:id = "@+id/view_bucket_line"
-            android:layout_width = "1dp"
+            android:layout_width = "0.5dp"
             android:layout_height = "0dp"
             android:layout_marginBottom = "2dp"
             android:layout_marginStart = "@dimen/margin_ten"
