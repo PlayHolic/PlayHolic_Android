@@ -76,14 +76,13 @@
     </style>
     
     <style name = "ItemButton">
-        <item name = "android:paddingBottom">@dimen/margin_ten</item>
         <item name = "android:layout_marginEnd">15dp</item>
-        <item name = "android:paddingStart">@dimen/item_default_margin</item>
-        <item name = "android:paddingTop">@dimen/item_default_margin</item>
+        <item name = "android:paddingTop">13dp</item>
+        <item name = "android:paddingEnd">15dp</item>
+        <item name = "android:paddingBottom">13dp</item>
         <item name = "android:drawablePadding">@dimen/padding_drawable</item>
         <item name = "android:textColor">@color/colorWarmGray</item>
         <item name = "android:textSize">12sp</item>
-        <item name = "layout_constraintHorizontal_chainStyle">packed</item>
     </style>
     
     <style name = "ItemButton.Done">
@@ -133,10 +132,10 @@
     <style name = "DatePickText">
         <item name = "android:textSize">21sp</item>
     </style>
-
+    
     <style name = "MyPageCardView">
-        <item name ="android:background">@android:color/white</item>
-        <item name="cardElevation">0.8dp</item>
+        <item name = "android:background">@android:color/white</item>
+        <item name = "cardElevation">0.8dp</item>
         <item name = "android:layout_height">wrap_content</item>
     </style>
     
@@ -148,5 +147,11 @@
         <item name = "android:layout_marginStart">5dp</item>
         <item name = "android:background">@drawable/border_rec_gray</item>
         <item name = "android:padding">3dp</item>
+    </style>
+    
+    <style name = "ItemTicketContentTitle">
+        <item name = "android:textColor">@color/colorWarmGray</item>
+        <item name = "android:fontFamily">@font/nanum_gothic_bold</item>
+        <item name = "android:textSize">12sp</item>
     </style>
 </resources>

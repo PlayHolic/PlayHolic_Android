@@ -7,21 +7,22 @@
     <android.support.v7.widget.CardView
         android:layout_width = "match_parent"
         android:layout_height = "wrap_content"
-        app:cardCornerRadius = "2dp"
+        app:cardCornerRadius = "3dp"
         app:cardElevation = "2dp"
         >
         
         <android.support.constraint.ConstraintLayout
             android:layout_width = "match_parent"
-            android:layout_height = "270dp"
+            android:layout_height = "wrap_content"
             android:background = "@android:color/white"
             >
             
             <TextView
-                android:id = "@+id/text_ticket_bottom_title"
+                android:id = "@+id/text_ticket_bot_title"
                 android:layout_width = "0dp"
                 android:layout_height = "wrap_content"
-                android:layout_marginStart = "15dp"
+                android:layout_marginStart = "@dimen/item_default_margin"
+                android:fontFamily = "@font/nanum_gothic_bold"
                 android:maxLines = "1"
                 android:paddingTop = "@dimen/margin_ten"
                 android:textColor = "@color/colorFadeBlack"
@@ -32,7 +33,7 @@
                 />
             
             <ImageView
-                android:id = "@+id/img_ticket_bottom_poster"
+                android:id = "@+id/img_ticket_bot_poster"
                 android:layout_width = "0dp"
                 android:layout_height = "0dp"
                 android:layout_marginTop = "@dimen/margin_ten"
@@ -40,11 +41,11 @@
                 app:layout_constraintDimensionRatio = "4:1"
                 app:layout_constraintEnd_toEndOf = "parent"
                 app:layout_constraintStart_toStartOf = "parent"
-                app:layout_constraintTop_toBottomOf = "@+id/text_ticket_bottom_title"
+                app:layout_constraintTop_toBottomOf = "@+id/text_ticket_bot_title"
                 />
             
             <TextView
-                android:id = "@+id/text_ticket_bottom_runtime"
+                android:id = "@+id/text_ticket_bot_runtime"
                 android:layout_width = "wrap_content"
                 android:layout_height = "wrap_content"
                 android:layout_marginTop = "@dimen/margin_ten"
@@ -52,52 +53,54 @@
                 android:padding = "2dp"
                 android:textColor = "@android:color/white"
                 android:textSize = "10sp"
-                app:layout_constraintStart_toStartOf = "@+id/text_ticket_bottom_title"
-                app:layout_constraintTop_toTopOf = "@+id/img_ticket_bottom_poster"
+                app:layout_constraintStart_toStartOf = "@+id/text_ticket_bot_title"
+                app:layout_constraintTop_toTopOf = "@+id/img_ticket_bot_poster"
                 />
             
             <TextView
-                android:id = "@+id/text_ticket_bottom_date"
+                android:id = "@+id/text_ticket_bot_date"
                 android:layout_width = "wrap_content"
                 android:layout_height = "wrap_content"
                 android:textColor = "@android:color/white"
-                app:layout_constraintBottom_toTopOf = "@+id/text_ticket_bottom_location"
-                app:layout_constraintStart_toStartOf = "@+id/text_ticket_bottom_title"
+                app:layout_constraintBottom_toTopOf = "@+id/text_ticket_bot_location"
+                app:layout_constraintStart_toStartOf = "@+id/text_ticket_bot_title"
                 />
             
             <TextView
-                android:id = "@+id/text_ticket_bottom_location"
+                android:id = "@+id/text_ticket_bot_location"
                 android:layout_width = "wrap_content"
                 android:layout_height = "wrap_content"
                 android:layout_marginBottom = "@dimen/margin_ten"
                 android:textColor = "@android:color/white"
-                app:layout_constraintBottom_toBottomOf = "@+id/img_ticket_bottom_poster"
-                app:layout_constraintStart_toStartOf = "@+id/text_ticket_bottom_title"
+                app:layout_constraintBottom_toBottomOf = "@+id/img_ticket_bot_poster"
+                app:layout_constraintStart_toStartOf = "@+id/text_ticket_bot_title"
                 />
             
             <GridLayout
                 android:id = "@+id/grid_ticket_bottom"
                 android:layout_width = "0dp"
                 android:layout_height = "wrap_content"
-                android:layout_marginBottom = "1dp"
+                android:background = "@drawable/border_bottom_gray"
                 android:columnCount = "2"
+                android:paddingBottom = "@dimen/item_default_margin"
                 android:paddingEnd = "@dimen/item_default_margin"
                 android:paddingStart = "@dimen/item_default_margin"
                 android:paddingTop = "@dimen/margin_ten"
                 android:useDefaultMargins = "true"
-                app:layout_constraintTop_toBottomOf = "@+id/img_ticket_bottom_poster"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toBottomOf = "@+id/img_ticket_bot_poster"
                 >
                 
                 <TextView
+                    style = "@style/ItemTicketContentTitle"
                     android:layout_width = "wrap_content"
                     android:layout_height = "wrap_content"
                     android:text = "@string/age"
-                    android:textColor = "@color/colorWarmGray"
-                    android:textSize = "12sp"
                     />
                 
                 <TextView
-                    android:id = "@+id/text_ticket_bottom_age"
+                    android:id = "@+id/text_ticket_bot_age"
                     android:layout_width = "wrap_content"
                     android:layout_height = "wrap_content"
                     android:textColor = "@color/colorFadeBlack"
@@ -105,15 +108,14 @@
                     />
                 
                 <TextView
+                    style = "@style/ItemTicketContentTitle"
                     android:layout_width = "wrap_content"
                     android:layout_height = "wrap_content"
                     android:text = "@string/cast"
-                    android:textColor = "@color/colorWarmGray"
-                    android:textSize = "12sp"
                     />
                 
                 <TextView
-                    android:id = "@+id/text_ticket_bottom_cast"
+                    android:id = "@+id/text_ticket_bot_cast"
                     android:layout_width = "wrap_content"
                     android:layout_height = "wrap_content"
                     android:textColor = "@color/colorFadeBlack"
@@ -121,15 +123,14 @@
                     />
                 
                 <TextView
+                    style = "@style/ItemTicketContentTitle"
                     android:layout_width = "wrap_content"
                     android:layout_height = "wrap_content"
                     android:text = "@string/crew"
-                    android:textColor = "@color/colorWarmGray"
-                    android:textSize = "12sp"
                     />
                 
                 <TextView
-                    android:id = "@+id/text_ticket_bottom_crew"
+                    android:id = "@+id/text_ticket_bot_crew"
                     android:layout_width = "wrap_content"
                     android:layout_height = "wrap_content"
                     android:textColor = "@color/colorFadeBlack"
@@ -138,18 +139,7 @@
             
             </GridLayout>
             
-            <View
-                android:id = "@+id/view_ticket_line"
-                android:layout_width = "0dp"
-                android:layout_height = "0.5dp"
-                android:layout_marginTop = "@dimen/item_default_margin"
-                android:background = "@color/colorWarmGray"
-                app:layout_constraintEnd_toEndOf = "parent"
-                app:layout_constraintStart_toStartOf = "parent"
-                app:layout_constraintBottom_toTopOf="@+id/text_go_star"
-                app:layout_constraintTop_toBottomOf = "@+id/grid_ticket_bottom"
-                />
-    
+            <!--Ticket button-->
             <TextView
                 android:id = "@+id/text_go_star"
                 style = "@style/ItemButton"
@@ -157,13 +147,13 @@
                 android:layout_height = "wrap_content"
                 android:drawableStart = "@drawable/ic_star_gray"
                 android:text = "@string/go_star"
-                app:layout_constraintTop_toBottomOf="@+id/view_ticket_line"
-                app:layout_constraintHorizontal_chainStyle="packed"
                 app:layout_constraintBottom_toBottomOf = "parent"
                 app:layout_constraintEnd_toStartOf = "@+id/text_go_comment"
+                app:layout_constraintHorizontal_chainStyle = "packed"
                 app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toBottomOf = "@+id/grid_ticket_bottom"
                 />
-    
+            
             <TextView
                 android:id = "@+id/text_go_comment"
                 style = "@style/ItemButton"
@@ -171,12 +161,11 @@
                 android:layout_height = "wrap_content"
                 android:drawableStart = "@drawable/ic_write"
                 android:text = "@string/go_comment"
-                app:layout_constraintTop_toBottomOf="@+id/view_ticket_line"
                 app:layout_constraintBottom_toBottomOf = "parent"
                 app:layout_constraintEnd_toEndOf = "parent"
                 app:layout_constraintStart_toEndOf = "@+id/text_go_star"
                 />
-            
+        
         </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.CardView>
 </layout>
