@@ -4,7 +4,6 @@ import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import me.plic.playholic.R
@@ -40,13 +39,5 @@ class MyPageFragment : Fragment() {
                 setDisplayHomeAsUpEnabled(true)
             }
         }
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        if (item?.itemId == android.R.id.home) {
-            activity?.onBackPressed()
-            return true
-        }
-        return false
     }
 }
