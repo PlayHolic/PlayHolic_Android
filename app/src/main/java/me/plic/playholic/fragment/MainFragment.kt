@@ -28,6 +28,16 @@ class MainFragment : Fragment(), SwitchScreen {
         super.onCreateOptionsMenu(menu, inflater)
     }
 
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when (item?.itemId) {
+            R.id.menu_my -> {
+                goToMyPage()
+                return true
+            }
+        }
+        return false
+    }
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false)
 
@@ -48,6 +58,16 @@ class MainFragment : Fragment(), SwitchScreen {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+    }
+
+    private fun goToMyPage() {
+        activity?.apply {
+            supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.frame_main, MyPageFragment())
+                    .addToBackStack(null)
+                    .commit()
+        }
     }
 
     /**
