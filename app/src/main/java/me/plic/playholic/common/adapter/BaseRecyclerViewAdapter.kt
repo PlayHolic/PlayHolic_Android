@@ -13,7 +13,6 @@ abstract class BaseRecyclerViewAdapter<T : Any, H : RecyclerView.ViewHolder> : R
         notifyItemChanged(itemList.size - 1)
     }
 
-
     fun addItems(dataSet: List<T>) {
         itemList.addAll(dataSet)
 
@@ -37,5 +36,8 @@ abstract class BaseRecyclerViewAdapter<T : Any, H : RecyclerView.ViewHolder> : R
         return itemList[positon]
     }
 
+    override fun getItemCount(): Int {
+        return itemList.size
+    }
 
 }
