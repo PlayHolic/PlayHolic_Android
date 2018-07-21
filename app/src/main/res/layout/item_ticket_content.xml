@@ -4,27 +4,27 @@
     xmlns:app = "http://schemas.android.com/apk/res-auto"
     >
     
-    <android.support.v7.widget.CardView
         android:layout_width = "match_parent"
         android:layout_height = "wrap_content"
-        app:cardCornerRadius = "3dp"
-        app:cardElevation = "2dp"
+        android:paddingBottom = "8dp"
+        android:visibility = "gone"
         >
         
         <android.support.constraint.ConstraintLayout
             android:layout_width = "match_parent"
             android:layout_height = "wrap_content"
-            android:background = "@android:color/white"
+            android:background = "@drawable/border_round_darkwhite"
             >
             
             <TextView
                 android:id = "@+id/text_ticket_bot_title"
                 android:layout_width = "0dp"
                 android:layout_height = "wrap_content"
+                android:layout_marginEnd = "@dimen/item_default_margin"
                 android:layout_marginStart = "@dimen/item_default_margin"
+                android:layout_marginTop = "11dp"
                 android:fontFamily = "@font/nanum_gothic_bold"
                 android:maxLines = "1"
-                android:paddingTop = "@dimen/margin_ten"
                 android:textColor = "@color/colorFadeBlack"
                 android:textSize = "14sp"
                 app:layout_constraintEnd_toEndOf = "parent"
@@ -36,12 +36,14 @@
                 android:id = "@+id/img_ticket_bot_poster"
                 android:layout_width = "0dp"
                 android:layout_height = "0dp"
-                android:layout_marginTop = "@dimen/margin_ten"
-                android:background = "@color/colorFadeBlack"
-                app:layout_constraintDimensionRatio = "4:1"
+                android:layout_marginTop = "11dp"
+                android:background = "@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintDimensionRatio = "4:1.3"
                 app:layout_constraintEnd_toEndOf = "parent"
                 app:layout_constraintStart_toStartOf = "parent"
                 app:layout_constraintTop_toBottomOf = "@+id/text_ticket_bot_title"
+                app:layout_constraintVertical_bias = "0"
                 />
             
             <TextView
@@ -50,9 +52,12 @@
                 android:layout_height = "wrap_content"
                 android:layout_marginTop = "@dimen/margin_ten"
                 android:background = "@drawable/border_rec_darkwhite"
+                android:gravity = "center"
                 android:padding = "2dp"
                 android:textColor = "@android:color/white"
                 android:textSize = "10sp"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintHorizontal_bias = "0"
                 app:layout_constraintStart_toStartOf = "@+id/text_ticket_bot_title"
                 app:layout_constraintTop_toTopOf = "@+id/img_ticket_bot_poster"
                 />
@@ -64,6 +69,8 @@
                 android:textColor = "@android:color/white"
                 app:layout_constraintBottom_toTopOf = "@+id/text_ticket_bot_location"
                 app:layout_constraintStart_toStartOf = "@+id/text_ticket_bot_title"
+                app:layout_constraintTop_toBottomOf = "@+id/text_ticket_bot_runtime"
+                app:layout_constraintVertical_bias = "1"
                 />
             
             <TextView
@@ -71,6 +78,7 @@
                 android:layout_width = "wrap_content"
                 android:layout_height = "wrap_content"
                 android:layout_marginBottom = "@dimen/margin_ten"
+                android:paddingTop = "1dp"
                 android:textColor = "@android:color/white"
                 app:layout_constraintBottom_toBottomOf = "@+id/img_ticket_bot_poster"
                 app:layout_constraintStart_toStartOf = "@+id/text_ticket_bot_title"
@@ -82,14 +90,13 @@
                 android:layout_height = "wrap_content"
                 android:background = "@drawable/border_bottom_gray"
                 android:columnCount = "2"
-                android:paddingBottom = "@dimen/item_default_margin"
-                android:paddingEnd = "@dimen/item_default_margin"
-                android:paddingStart = "@dimen/item_default_margin"
-                android:paddingTop = "@dimen/margin_ten"
+                android:padding = "@dimen/item_default_margin"
                 android:useDefaultMargins = "true"
+                app:layout_constraintBottom_toBottomOf = "parent"
                 app:layout_constraintEnd_toEndOf = "parent"
                 app:layout_constraintStart_toStartOf = "parent"
                 app:layout_constraintTop_toBottomOf = "@+id/img_ticket_bot_poster"
+                app:layout_constraintVertical_bias = "0"
                 >
                 
                 <TextView
@@ -164,8 +171,9 @@
                 app:layout_constraintBottom_toBottomOf = "parent"
                 app:layout_constraintEnd_toEndOf = "parent"
                 app:layout_constraintStart_toEndOf = "@+id/text_go_star"
+                app:layout_constraintTop_toBottomOf = "@+id/grid_ticket_bottom"
                 />
         
         </android.support.constraint.ConstraintLayout>
-    </android.support.v7.widget.CardView>
+    </FrameLayout>
 </layout>
