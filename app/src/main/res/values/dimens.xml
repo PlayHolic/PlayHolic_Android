@@ -4,4 +4,5 @@
     <dimen name = "default_top_margin">16dp</dimen>
     <dimen name = "margin_ten">10dp</dimen>
     <dimen name = "padding_drawable">5dp</dimen>
+    <dimen name = "button_padding">13dp</dimen>
 </resources>
