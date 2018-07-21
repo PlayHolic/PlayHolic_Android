@@ -4,18 +4,21 @@
     xmlns:app = "http://schemas.android.com/apk/res-auto"
     >
     
-
-<com.ramotion.foldingcell.FoldingCell
-    android:layout_width = "match_parent"
-    app:animationDuration ="1300"
-    android:layout_height = "wrap_content"
-    >
     
-    <include
-        layout="@layout/item_ticket_content"/>
-    <include
-        layout="@layout/item_ticket_title"/>
+    <com.ramotion.foldingcell.FoldingCell
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        app:animationDuration = "1000"
+        app:backSideColor = "@color/colorDefaultBackground"
+        app:cameraHeight = "30"
+        >
+        
+        <include
+            layout = "@layout/item_ticket_content" />
+        
+        <include
+            layout = "@layout/item_ticket_title" />
     
-
-</com.ramotion.foldingcell.FoldingCell>
+    
+    </com.ramotion.foldingcell.FoldingCell>
 </layout>

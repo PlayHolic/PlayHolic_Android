@@ -79,9 +79,9 @@
     
     <style name = "ItemButton">
         <item name = "android:layout_marginEnd">15dp</item>
-        <item name = "android:paddingTop">13dp</item>
-        <item name = "android:paddingEnd">15dp</item>
-        <item name = "android:paddingBottom">13dp</item>
+        <item name = "android:paddingTop">@dimen/button_padding</item>
+        <item name = "android:paddingEnd">@dimen/button_padding</item>
+        <item name = "android:paddingBottom">@dimen/button_padding</item>
         <item name = "android:drawablePadding">@dimen/padding_drawable</item>
         <item name = "android:textColor">@color/colorWarmGray</item>
         <item name = "android:textSize">12sp</item>
