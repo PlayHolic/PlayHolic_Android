@@ -12,7 +12,7 @@ class BucketAdapter : BaseRecyclerViewAdapter<Bucket, BucketViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BucketViewHolder {
         return BucketViewHolder(
                 LayoutInflater.from(parent.context)
-                        .inflate(R.layout.item_bucket, null, false))
+                        .inflate(R.layout.item_bucket, parent, false))
     }
 
     override fun onBindViewHolder(holder: BucketViewHolder, position: Int) {

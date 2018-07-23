@@ -41,7 +41,7 @@
         <android.support.v7.widget.RecyclerView
             android:id = "@+id/recycler_bucket"
             android:layout_width = "0dp"
-            android:layout_height = "80dp"
+            android:layout_height = "wrap_content"
             android:layout_marginTop = "1.3dp"
             app:layout_constraintEnd_toEndOf = "parent"
             app:layout_constraintStart_toStartOf = "parent"
