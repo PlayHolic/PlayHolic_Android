@@ -1,4 +1,4 @@
-package me.plic.playholic.viewModel
+package me.plic.playholic.ticket
 
 
 import android.databinding.BaseObservable

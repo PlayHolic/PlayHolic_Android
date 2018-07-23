@@ -8,7 +8,7 @@
         
         <variable
             name = "ticket"
-            type = "me.plic.playholic.viewModel.TicketItemViewModel"
+            type = "me.plic.playholic.ticket.TicketItemViewModel"
             />
     </data>
     

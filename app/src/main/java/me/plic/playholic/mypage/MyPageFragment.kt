@@ -1,4 +1,4 @@
-package me.plic.playholic.fragment
+package me.plic.playholic.mypage
 
 import android.databinding.DataBindingUtil
 import android.os.Bundle
@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import me.plic.playholic.R
-import me.plic.playholic.activity.MainActivity
+import me.plic.playholic.ui.main.MainActivity
 import me.plic.playholic.databinding.FragmentMypageBinding
 
 class MyPageFragment : Fragment() {

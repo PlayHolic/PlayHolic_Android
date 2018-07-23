@@ -1,4 +1,4 @@
-package me.plic.playholic.fragment.viewHolder
+package me.plic.playholic.ticket.viewHolder
 
 import android.databinding.DataBindingUtil
 import android.support.v7.widget.RecyclerView
@@ -6,7 +6,7 @@ import android.view.View
 import io.reactivex.Observable
 import me.plic.playholic.data.Ticket
 import me.plic.playholic.databinding.ItemTicketBinding
-import me.plic.playholic.viewModel.TicketItemViewModel
+import me.plic.playholic.ticket.TicketItemViewModel
 
 class TicketViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 

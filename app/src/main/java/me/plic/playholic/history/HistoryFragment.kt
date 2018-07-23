@@ -1,4 +1,4 @@
-package me.plic.playholic.fragment
+package me.plic.playholic.history
 
 import android.databinding.DataBindingUtil
 import android.os.Bundle

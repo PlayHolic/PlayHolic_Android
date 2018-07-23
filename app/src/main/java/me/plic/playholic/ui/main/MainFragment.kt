@@ -1,4 +1,4 @@
-package me.plic.playholic.fragment
+package me.plic.playholic.ui.main
 
 import android.arch.lifecycle.ViewModelProviders
 import android.databinding.DataBindingUtil
@@ -7,11 +7,11 @@ import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.view.*
 import me.plic.playholic.R
-import me.plic.playholic.activity.MainActivity
 import me.plic.playholic.common.SwitchScreen
 import me.plic.playholic.databinding.FragmentMainBinding
-import me.plic.playholic.viewModel.MainFragmentViewModel
-import me.plic.playholic.viewModel.TicketViewModel
+import me.plic.playholic.history.HistoryFragment
+import me.plic.playholic.mypage.MyPageFragment
+import me.plic.playholic.ticket.TicketViewModel
 
 class MainFragment : Fragment(), SwitchScreen {
 

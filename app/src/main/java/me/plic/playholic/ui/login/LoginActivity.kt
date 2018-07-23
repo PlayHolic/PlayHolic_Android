@@ -1,4 +1,4 @@
-package me.plic.playholic.activity
+package me.plic.playholic.ui.login
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity

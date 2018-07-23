@@ -2,7 +2,8 @@ package me.plic.playholic.activity
 
 import android.support.test.rule.ActivityTestRule
 import me.plic.playholic.R
-import me.plic.playholic.fragment.MainFragment
+import me.plic.playholic.ui.main.MainActivity
+import me.plic.playholic.ui.main.MainFragment
 import org.junit.Rule
 import org.junit.Test
 

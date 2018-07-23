@@ -7,7 +7,7 @@ import android.support.test.espresso.matcher.ViewMatchers.isDisplayed
 import android.support.test.espresso.matcher.ViewMatchers.withId
 import android.support.test.rule.ActivityTestRule
 import me.plic.playholic.R
-import me.plic.playholic.activity.MainActivity
+import me.plic.playholic.ui.main.MainActivity
 import org.junit.Rule
 import org.junit.Test
 

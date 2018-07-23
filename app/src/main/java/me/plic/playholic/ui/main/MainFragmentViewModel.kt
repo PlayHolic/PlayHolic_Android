@@ -1,4 +1,4 @@
-package me.plic.playholic.viewModel
+package me.plic.playholic.ui.main
 
 import android.arch.lifecycle.ViewModel
 import me.plic.playholic.common.SwitchScreen
