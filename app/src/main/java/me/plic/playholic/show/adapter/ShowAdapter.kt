@@ -17,6 +17,6 @@ class ShowAdapter : BaseRecyclerViewAdapter<Show, ShowViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: ShowViewHolder, position: Int) {
-
+        holder.bindShowItemViewModel(getItem(position))
     }
 }
