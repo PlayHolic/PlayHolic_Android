@@ -60,5 +60,8 @@
     <!--menu-->
     <string name = "menu_my">내 정보</string>
     <string name = "menu_search">검색</string>
+    
+    <!--bucket-->
+    <string name = "today">Today</string>
 
 </resources>
