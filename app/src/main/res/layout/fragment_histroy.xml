@@ -10,6 +10,10 @@
             name = "showViewModel"
             type = "me.plic.playholic.show.ShowViewModel"
             />
+        
+        <variable
+            name = "hallViewModel"
+            type = "me.plic.playholic.hall.HallViewModel"/>
     </data>
     
     <android.support.v4.widget.NestedScrollView

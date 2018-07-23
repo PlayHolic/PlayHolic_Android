@@ -18,5 +18,6 @@ class HallAdapter : BaseRecyclerViewAdapter<Hall, HallViewHolder>() {
 
     override fun onBindViewHolder(holder: HallViewHolder, position: Int) {
 
+        holder.bindHallItemViewModel(getItem(position))
     }
 }
