@@ -4,6 +4,12 @@
     xmlns:app = "http://schemas.android.com/apk/res-auto"
     >
     
+    <data>
+        <variable
+            name = "show"
+            type = "me.plic.playholic.show.ShowItemViewModel"/>
+    </data>
+    
     <android.support.constraint.ConstraintLayout
         android:layout_width = "match_parent"
         android:layout_height = "42dp"
@@ -19,6 +25,7 @@
             android:layout_height = "wrap_content"
             android:layout_marginBottom = "4dp"
             android:layout_marginTop = "4dp"
+            android:text="@{String.valueOf(show.id)}"
             android:fontFamily = "@font/nanum_gothic_bold"
             android:textColor = "@color/colorPrimary"
             app:layout_constraintStart_toStartOf = "parent"
@@ -29,6 +36,7 @@
             android:id = "@+id/text_show_title"
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
+            android:text="@{show.title}"
             android:layout_marginStart = "11dp"
             app:layout_constraintStart_toEndOf = "@+id/text_show_num"
             app:layout_constraintTop_toTopOf = "@+id/text_show_num"
@@ -40,6 +48,7 @@
             android:layout_height = "wrap_content"
             android:textColor = "@color/colorPrimary"
             android:textSize = "12sp"
+            android:text="@{String.valueOf(show.count) +String.format(@string/number_of_times)}"
             app:layout_constraintBottom_toBottomOf = "parent"
             app:layout_constraintStart_toStartOf = "@+id/text_show_title"
             app:layout_constraintTop_toBottomOf = "@+id/text_show_title"
