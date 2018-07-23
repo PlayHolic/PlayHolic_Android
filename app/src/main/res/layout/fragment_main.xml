@@ -17,6 +17,9 @@
             />
         
         <variable
+            name = "bucketViewModel"
+            type = "me.plic.playholic.bucket.BucketViewModel"/>
+        <variable
             name = "ticketViewModel"
             type = "me.plic.playholic.ticket.TicketViewModel"/>
     </data>
@@ -49,6 +52,7 @@
         <TextView
             android:id = "@+id/text_no_reserve"
             android:layout_width = "0dp"
+            android:visibility="@{bucketViewModel.buckets.size > 0 ? View.GONE : View.VISIBLE}"
             android:layout_height = "80dp"
             android:layout_marginTop = "1.3dp"
             android:background = "@android:color/white"

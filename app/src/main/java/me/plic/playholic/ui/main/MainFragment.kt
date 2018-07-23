@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.view.*
 import me.plic.playholic.R
+import me.plic.playholic.bucket.BucketViewModel
 import me.plic.playholic.common.SwitchScreen
 import me.plic.playholic.databinding.FragmentMainBinding
 import me.plic.playholic.history.HistoryFragment
@@ -49,6 +50,7 @@ class MainFragment : Fragment(), SwitchScreen {
                 }
 
         binding.ticketViewModel = TicketViewModel()
+        binding.bucketViewModel = BucketViewModel()
 
         initToolbar()
 
@@ -62,10 +64,22 @@ class MainFragment : Fragment(), SwitchScreen {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        initRecyclerView()
+        initBucketRecyclerView()
+        initTicketRecyclerView()
     }
 
-    private fun initRecyclerView() {
+    private fun initBucketRecyclerView() {
+        binding.recyclerBucket.apply {
+            setHasFixedSize(true)
+            adapter = binding.bucketViewModel?.adapter
+
+            layoutManager = LinearLayoutManager(this@MainFragment.activity).apply {
+                orientation = LinearLayoutManager.HORIZONTAL
+            }
+        }
+    }
+
+    private fun initTicketRecyclerView() {
         binding.recyclerTicket.apply {
             setHasFixedSize(true)
             adapter = binding.ticketViewModel?.adapter
