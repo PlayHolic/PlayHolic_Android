@@ -11,8 +11,9 @@
         <item name = "colorAccent">@color/colorPrimary</item>
     </style>
     
-    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
-        <item name="android:windowBackground">@drawable/splash</item>
+    <style name = "SplashTheme"
+        parent = "Theme.AppCompat.NoActionBar">
+        <item name = "android:windowBackground">@drawable/splash</item>
     </style>
     
     <style name = "TextViewStyle"
@@ -155,5 +156,15 @@
         <item name = "android:textColor">@color/colorWarmGray</item>
         <item name = "android:fontFamily">@font/nanum_gothic_bold</item>
         <item name = "android:textSize">12sp</item>
+    </style>
+    
+    <style name = "HeaderHistory">
+        <item name = "android:paddingBottom">20dp</item>
+        <item name = "android:paddingTop">@dimen/margin_ten</item>
+        <item name = "android:paddingStart">@dimen/item_default_margin</item>
+        <item name = "android:fontFamily">@font/nanum_gothic_bold</item>
+        <item name = "android:gravity">left</item>
+        <item name = "android:layout_height">wrap_content</item>
+        <item name = "android:background">@android:color/white</item>
     </style>
 </resources>

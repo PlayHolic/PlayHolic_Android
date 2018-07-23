@@ -32,6 +32,8 @@
     
     <!--history-->
     <string name = "history">히스토리</string>
+    <string name = "most_seen">가장 많이 본 작품</string>
+    <string name = "most_hall">가장 많이 갔던 공연장</string>
     
     <!--star-->
     <string name = "yet_star">밀린 별점</string>
@@ -63,5 +65,8 @@
     
     <!--bucket-->
     <string name = "today">Today</string>
+    
+    <!--show-->
+    <string name = "number_of_times">회</string>
 
 </resources>
