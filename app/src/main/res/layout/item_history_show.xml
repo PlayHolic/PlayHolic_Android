@@ -6,17 +6,19 @@
     
     <android.support.constraint.ConstraintLayout
         android:layout_width = "match_parent"
-        android:layout_height = "45dp"
+        android:layout_height = "42dp"
+        android:layout_marginBottom = "12dp"
         android:background = "@android:color/white"
         android:paddingEnd = "@dimen/item_default_margin"
         android:paddingStart = "@dimen/item_default_margin"
-        android:paddingTop = "4dp"
         >
         
         <TextView
             android:id = "@+id/text_show_num"
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
+            android:layout_marginBottom = "4dp"
+            android:layout_marginTop = "4dp"
             android:fontFamily = "@font/nanum_gothic_bold"
             android:textColor = "@color/colorPrimary"
             app:layout_constraintStart_toStartOf = "parent"
@@ -27,9 +29,9 @@
             android:id = "@+id/text_show_title"
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
-            android:layout_marginStart = "@dimen/margin_ten"
+            android:layout_marginStart = "11dp"
             app:layout_constraintStart_toEndOf = "@+id/text_show_num"
-            app:layout_constraintTop_toTopOf = "parent"
+            app:layout_constraintTop_toTopOf = "@+id/text_show_num"
             />
         
         <TextView
@@ -47,7 +49,7 @@
             android:id = "@+id/img_show_poster"
             android:layout_width = "0dp"
             android:layout_height = "0dp"
-            android:background = "@color/colorFadeBlack"
+            android:background = "@mipmap/ic_launcher"
             app:layout_constraintBottom_toBottomOf = "parent"
             app:layout_constraintDimensionRatio = "1:1"
             app:layout_constraintEnd_toEndOf = "parent"
