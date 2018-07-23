@@ -4,6 +4,14 @@
     xmlns:app = "http://schemas.android.com/apk/res-auto"
     >
     
+    <data>
+        
+        <variable
+            name = "bucket"
+            type = "me.plic.playholic.bucket.BucketItemViewModel"
+            />
+    </data>
+    
     <android.support.constraint.ConstraintLayout
         android:layout_width = "match_parent"
         android:layout_height = "76dp"
@@ -14,6 +22,7 @@
         <TextView
             android:id = "@+id/text_bucket_day"
             android:layout_width = "wrap_content"
+            app:dDay="@{bucket.date}"
             android:layout_height = "wrap_content"
             android:background = "@drawable/border_round_purple"
             android:gravity = "center"
@@ -35,6 +44,7 @@
             android:layout_marginStart = "8dp"
             android:fontFamily = "@font/nanum_gothic_bold"
             android:maxLines = "1"
+            android:text = "@{bucket.title}"
             android:textSize = "14sp"
             app:layout_constraintBottom_toBottomOf = "@+id/text_bucket_day"
             app:layout_constraintEnd_toEndOf = "parent"
@@ -46,6 +56,7 @@
             android:id = "@+id/text_bucket_date"
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
+            android:text = "@{bucket.date}"
             android:textSize = "12sp"
             app:layout_constraintBottom_toBottomOf = "parent"
             app:layout_constraintStart_toStartOf = "parent"
@@ -72,6 +83,7 @@
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
             android:layout_marginStart = "@dimen/margin_ten"
+            android:text = "@{bucket.location}"
             android:textSize = "12sp"
             app:layout_constraintBottom_toBottomOf = "@+id/text_bucket_date"
             app:layout_constraintStart_toEndOf = "@+id/view_bucket_line"

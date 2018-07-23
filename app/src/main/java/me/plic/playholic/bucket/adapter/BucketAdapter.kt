@@ -3,9 +3,9 @@ package me.plic.playholic.bucket.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import me.plic.playholic.R
+import me.plic.playholic.bucket.viewHolder.BucketViewHolder
 import me.plic.playholic.common.adapter.BaseRecyclerViewAdapter
 import me.plic.playholic.data.Bucket
-import me.plic.playholic.bucket.viewHolder.BucketViewHolder
 
 class BucketAdapter : BaseRecyclerViewAdapter<Bucket, BucketViewHolder>() {
 
@@ -16,6 +16,8 @@ class BucketAdapter : BaseRecyclerViewAdapter<Bucket, BucketViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: BucketViewHolder, position: Int) {
-
+        holder.apply {
+            bindBucketItemViewModel(getItem(position))
+        }
     }
 }
