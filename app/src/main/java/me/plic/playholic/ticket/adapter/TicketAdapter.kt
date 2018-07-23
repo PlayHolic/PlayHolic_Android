@@ -1,4 +1,4 @@
-package me.plic.playholic.fragment.adapter
+package me.plic.playholic.ticket.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,7 +7,7 @@ import io.reactivex.subjects.PublishSubject
 import me.plic.playholic.R
 import me.plic.playholic.common.adapter.BaseRecyclerViewAdapter
 import me.plic.playholic.data.Ticket
-import me.plic.playholic.fragment.viewHolder.TicketViewHolder
+import me.plic.playholic.ticket.viewHolder.TicketViewHolder
 
 class TicketAdapter : BaseRecyclerViewAdapter<Ticket, TicketViewHolder>() {
 

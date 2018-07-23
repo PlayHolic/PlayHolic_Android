@@ -1,11 +1,10 @@
-package me.plic.playholic.activity
+package me.plic.playholic.ui.main
 
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import me.plic.playholic.R
 import me.plic.playholic.databinding.ActivityMainBinding
-import me.plic.playholic.fragment.MainFragment
 
 class MainActivity : AppCompatActivity() {
 

@@ -1,9 +1,11 @@
-package me.plic.playholic.activity
+package me.plic.playholic.ui.splash
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
+import me.plic.playholic.ui.login.LoginActivity
+import me.plic.playholic.ui.main.MainActivity
 
 class SplashActivity : AppCompatActivity() {
 

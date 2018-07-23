@@ -1,4 +1,4 @@
-package me.plic.playholic.fragment.viewHolder
+package me.plic.playholic.bucket.viewHolder
 
 import android.databinding.DataBindingUtil
 import android.support.v7.widget.RecyclerView

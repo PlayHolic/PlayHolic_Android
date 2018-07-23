@@ -1,11 +1,11 @@
-package me.plic.playholic.viewModel
+package me.plic.playholic.ticket
 
 import android.databinding.BaseObservable
 import android.databinding.Bindable
 import android.databinding.ObservableArrayList
 import com.ramotion.foldingcell.FoldingCell
 import me.plic.playholic.data.Ticket
-import me.plic.playholic.fragment.adapter.TicketAdapter
+import me.plic.playholic.ticket.adapter.TicketAdapter
 
 class TicketViewModel : BaseObservable() {
 

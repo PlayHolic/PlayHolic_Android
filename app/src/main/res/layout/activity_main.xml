@@ -9,6 +9,6 @@
         android:layout_width = "match_parent"
         android:layout_height = "match_parent"
         android:background = "@color/colorDefaultBackground"
-        tools:context = ".activity.MainActivity"
+        tools:context = ".ui.main.MainActivity"
      />
 </layout>

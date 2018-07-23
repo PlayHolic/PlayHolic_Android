@@ -13,12 +13,12 @@
         
         <variable
             name = "viewModel"
-            type = "me.plic.playholic.viewModel.MainFragmentViewModel"
+            type = "me.plic.playholic.ui.main.MainFragmentViewModel"
             />
         
         <variable
             name = "ticketViewModel"
-            type = "me.plic.playholic.viewModel.TicketViewModel"/>
+            type = "me.plic.playholic.ticket.TicketViewModel"/>
     </data>
     
     <android.support.constraint.ConstraintLayout
