@@ -4,6 +4,13 @@
     xmlns:app = "http://schemas.android.com/apk/res-auto"
     >
     
+    <data>
+        
+        <variable
+            name = "viewModel"
+            type = "me.plic.playholic.viewModel.TicketItemViewModel"
+            />
+    </data>
     
     <com.ramotion.foldingcell.FoldingCell
         android:layout_width = "match_parent"
@@ -14,10 +21,14 @@
         >
         
         <include
-            layout = "@layout/item_ticket_content" />
+            layout = "@layout/item_ticket_content"
+            app:ticket = "@{viewModel}"
+            />
         
         <include
-            layout = "@layout/item_ticket_title" />
+            layout = "@layout/item_ticket_title"
+            app:ticket = "@{viewModel}"
+            />
     
     
     </com.ramotion.foldingcell.FoldingCell>

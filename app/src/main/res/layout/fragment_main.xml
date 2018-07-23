@@ -15,6 +15,10 @@
             name = "viewModel"
             type = "me.plic.playholic.viewModel.MainFragmentViewModel"
             />
+        
+        <variable
+            name = "ticketViewModel"
+            type = "me.plic.playholic.viewModel.TicketViewModel"/>
     </data>
     
     <android.support.constraint.ConstraintLayout
@@ -72,6 +76,7 @@
         <TextView
             android:id = "@+id/text_main_count"
             style = "@style/TextSquareCount"
+            android:text="@{String.valueOf(ticketViewModel.tickets.size)}"
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
             app:layout_constraintBottom_toBottomOf = "@+id/text_main_title"
@@ -115,6 +120,7 @@
             android:id = "@+id/text_no_ticket"
             android:layout_width = "0dp"
             android:layout_height = "0dp"
+            android:visibility="@{ticketViewModel.tickets.size > 0 ? View.GONE : View.VISIBLE}"
             android:layout_marginEnd = "@dimen/item_default_margin"
             android:layout_marginStart = "@dimen/item_default_margin"
             android:layout_marginTop = "@dimen/default_top_margin"
