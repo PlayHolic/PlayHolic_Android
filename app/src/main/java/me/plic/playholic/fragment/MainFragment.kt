@@ -4,18 +4,19 @@ import android.arch.lifecycle.ViewModelProviders
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.widget.LinearLayoutManager
 import android.view.*
 import me.plic.playholic.R
 import me.plic.playholic.activity.MainActivity
 import me.plic.playholic.common.SwitchScreen
 import me.plic.playholic.databinding.FragmentMainBinding
 import me.plic.playholic.viewModel.MainFragmentViewModel
+import me.plic.playholic.viewModel.TicketViewModel
 
 class MainFragment : Fragment(), SwitchScreen {
 
     lateinit var binding: FragmentMainBinding
 
-    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -47,6 +48,8 @@ class MainFragment : Fragment(), SwitchScreen {
                     switchScreen = this@MainFragment
                 }
 
+        binding.ticketViewModel = TicketViewModel()
+
         initToolbar()
 
         return binding.root
@@ -58,6 +61,16 @@ class MainFragment : Fragment(), SwitchScreen {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
+        initRecyclerView()
+    }
+
+    private fun initRecyclerView() {
+        binding.recyclerTicket.apply {
+            setHasFixedSize(true)
+            adapter = binding.ticketViewModel?.adapter
+            layoutManager = LinearLayoutManager(this@MainFragment.activity)
+        }
     }
 
     private fun goToMyPage() {

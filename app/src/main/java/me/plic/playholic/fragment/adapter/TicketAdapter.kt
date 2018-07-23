@@ -21,7 +21,11 @@ class TicketAdapter : BaseRecyclerViewAdapter<Ticket, TicketViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: TicketViewHolder, position: Int) {
-        holder.getFoldingObservable(holder.itemView).subscribe(foldingSubject)
+        holder.apply {
+            bindTicketViewModel(getItem(position))
+            getFoldingObservable(holder.itemView).subscribe(foldingSubject)
+        }
+
     }
 
 

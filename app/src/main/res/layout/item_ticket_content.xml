@@ -4,6 +4,15 @@
     xmlns:app = "http://schemas.android.com/apk/res-auto"
     >
     
+    <data>
+        
+        <variable
+            name = "ticket"
+            type = "me.plic.playholic.viewModel.TicketItemViewModel"
+            />
+    </data>
+    
+    <FrameLayout
         android:layout_width = "match_parent"
         android:layout_height = "wrap_content"
         android:paddingBottom = "8dp"
@@ -25,6 +34,7 @@
                 android:layout_marginTop = "11dp"
                 android:fontFamily = "@font/nanum_gothic_bold"
                 android:maxLines = "1"
+                android:text = "@{ticket.title}"
                 android:textColor = "@color/colorFadeBlack"
                 android:textSize = "14sp"
                 app:layout_constraintEnd_toEndOf = "parent"
@@ -66,6 +76,7 @@
                 android:id = "@+id/text_ticket_bot_date"
                 android:layout_width = "wrap_content"
                 android:layout_height = "wrap_content"
+                android:text = "@{ticket.date}"
                 android:textColor = "@android:color/white"
                 app:layout_constraintBottom_toTopOf = "@+id/text_ticket_bot_location"
                 app:layout_constraintStart_toStartOf = "@+id/text_ticket_bot_title"
@@ -79,6 +90,7 @@
                 android:layout_height = "wrap_content"
                 android:layout_marginBottom = "@dimen/margin_ten"
                 android:paddingTop = "1dp"
+                android:text = "@{ticket.location}"
                 android:textColor = "@android:color/white"
                 app:layout_constraintBottom_toBottomOf = "@+id/img_ticket_bot_poster"
                 app:layout_constraintStart_toStartOf = "@+id/text_ticket_bot_title"
