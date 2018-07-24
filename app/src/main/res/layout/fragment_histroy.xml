@@ -17,8 +17,8 @@
             />
         
         <variable
-            name = "castViewModel"
-            type = "me.plic.playholic.tag.cast.TagCastViewModel"
+            name = "tagViewModel"
+            type = "me.plic.playholic.tag.TagViewModel"
             />
     </data>
     
@@ -31,6 +31,7 @@
         <android.support.constraint.ConstraintLayout
             android:layout_width = "match_parent"
             android:layout_height = "match_parent"
+            android:paddingBottom="24dp"
             android:background = "@color/colorDefaultBackground"
             >
             

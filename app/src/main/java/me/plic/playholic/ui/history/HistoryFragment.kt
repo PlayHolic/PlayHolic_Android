@@ -11,7 +11,7 @@ import me.plic.playholic.R
 import me.plic.playholic.databinding.FragmentHistroyBinding
 import me.plic.playholic.hall.HallViewModel
 import me.plic.playholic.show.ShowViewModel
-import me.plic.playholic.tag.cast.TagCastViewModel
+import me.plic.playholic.tag.TagViewModel
 import me.plic.playholic.ui.main.MainActivity
 
 class HistoryFragment : Fragment() {
@@ -26,7 +26,7 @@ class HistoryFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_histroy, container, false)
         binding.showViewModel = ShowViewModel()
         binding.hallViewModel = HallViewModel()
-        binding.castViewModel = TagCastViewModel()
+        binding.tagViewModel = TagViewModel()
 
         initToolbar()
 
