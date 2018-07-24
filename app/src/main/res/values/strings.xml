@@ -34,6 +34,7 @@
     <string name = "history">히스토리</string>
     <string name = "most_seen">가장 많이 본 작품</string>
     <string name = "most_hall">가장 많이 갔던 공연장</string>
+    <string name = "most_cast">선호하는 배우</string>
     
     <!--star-->
     <string name = "yet_star">밀린 별점</string>

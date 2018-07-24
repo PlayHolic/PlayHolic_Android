@@ -13,7 +13,13 @@
         
         <variable
             name = "hallViewModel"
-            type = "me.plic.playholic.hall.HallViewModel"/>
+            type = "me.plic.playholic.hall.HallViewModel"
+            />
+        
+        <variable
+            name = "castViewModel"
+            type = "me.plic.playholic.tag.cast.TagCastViewModel"
+            />
     </data>
     
     <android.support.v4.widget.NestedScrollView
@@ -120,21 +126,23 @@
                 app:layout_constraintStart_toStartOf = "parent"
                 app:layout_constraintTop_toBottomOf = "@+id/text_header_hall"
                 />
-            
-            <!--태그-->
-            <com.moxun.tagcloudlib.view.TagCloudView
-                android:id = "@+id/tag_history_cast"
+    
+    
+            <TextView
+                android:id = "@+id/text_header_cast"
+                style = "@style/HeaderHistory"
                 android:layout_width = "0dp"
-                android:layout_height = "wrap_content"
-                android:layout_marginTop = "@dimen/item_default_margin"
-                android:background = "@android:color/white"
-                app:autoScrollMode = "uniform"
-                app:darkColor = "@color/colorPrimary"
+                android:layout_marginTop = "12dp"
+                android:text = "@string/most_cast"
                 app:layout_constraintEnd_toEndOf = "parent"
                 app:layout_constraintStart_toStartOf = "parent"
                 app:layout_constraintTop_toBottomOf = "@+id/recycler_hall"
-                app:lightColor = "@color/colorVaguePrimary"
-                app:scrollSpeed = "3"
+                />
+            <!--태그-->
+            <include
+                android:id = "@+id/tag_cast"
+                layout = "@layout/layout_tag_cast"
+                app:viewModel = "@{castViewModel}"
                 />
             
             <com.moxun.tagcloudlib.view.TagCloudView
@@ -147,7 +155,7 @@
                 app:darkColor = "@color/colorPrimary"
                 app:layout_constraintEnd_toEndOf = "parent"
                 app:layout_constraintStart_toStartOf = "parent"
-                app:layout_constraintTop_toBottomOf = "@+id/tag_history_cast"
+                app:layout_constraintTop_toBottomOf = "@+id/tag_cast"
                 app:lightColor = "@color/colorVaguePrimary"
                 app:scrollSpeed = "3"
                 />
