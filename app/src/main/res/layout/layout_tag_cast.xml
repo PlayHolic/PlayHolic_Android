@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    >
+    
+    <data>
+        
+        <import type = "android.view.View" />
+        
+        <variable
+            name = "viewModel"
+            type = "me.plic.playholic.tag.cast.TagCastViewModel"
+            />
+    </data>
+    
+    <com.moxun.tagcloudlib.view.TagCloudView
+        android:id = "@+id/tag_history_cast"
+        android:layout_width = "match_parent"
+        android:layout_height = "200dp"
+        android:paddingTop="0dp"
+        android:background = "@drawable/border_bottom_gray"
+        app:adapter = "@{viewModel.adapter}"
+        app:autoScrollMode = "uniform"
+        app:darkColor = "@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf = "parent"
+        app:radiusPercent="0.6"
+        app:layout_constraintStart_toStartOf = "parent"
+        app:layout_constraintTop_toBottomOf = "@+id/text_header_cast"
+        app:lightColor = "@color/colorVaguePrimary"
+        app:scrollSpeed = "3"
+        />
+</layout>
