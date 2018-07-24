@@ -1,4 +1,4 @@
-package me.plic.playholic.history
+package me.plic.playholic.ui.history
 
 import android.databinding.DataBindingUtil
 import android.os.Bundle
@@ -11,6 +11,7 @@ import me.plic.playholic.R
 import me.plic.playholic.databinding.FragmentHistroyBinding
 import me.plic.playholic.hall.HallViewModel
 import me.plic.playholic.show.ShowViewModel
+import me.plic.playholic.ui.main.MainActivity
 
 class HistoryFragment : Fragment() {
 
@@ -25,7 +26,16 @@ class HistoryFragment : Fragment() {
         binding.showViewModel = ShowViewModel()
         binding.hallViewModel = HallViewModel()
 
+        initToolbar()
+
         return binding.root
+    }
+
+    private fun initToolbar() {
+        (activity as MainActivity).apply {
+            setSupportActionBar(this@HistoryFragment.binding.toolbar)
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        }
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
