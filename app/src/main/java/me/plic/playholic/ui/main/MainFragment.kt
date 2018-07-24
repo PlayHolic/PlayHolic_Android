@@ -47,6 +47,7 @@ class MainFragment : Fragment(), SwitchScreen {
                 .get(MainFragmentViewModel::class.java)
                 .apply {
                     switchScreen = this@MainFragment
+                    fgManager = this@MainFragment.fragmentManager
                 }
 
         binding.ticketViewModel = TicketViewModel()

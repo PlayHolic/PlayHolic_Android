@@ -3,6 +3,11 @@
     xmlns:android = "http://schemas.android.com/apk/res/android"
     xmlns:app = "http://schemas.android.com/apk/res-auto"
     >
+    <data>
+        <variable
+            name = "viewModel"
+            type = "me.plic.playholic.ui.main.MainFragmentViewModel"/>
+    </data>
     
     <android.support.constraint.ConstraintLayout
         android:layout_width = "match_parent"
@@ -29,6 +34,7 @@
                 android:layout_width = "wrap_content"
                 android:layout_height = "wrap_content"
                 android:src = "@drawable/ic_wishlist_w"
+                android:onClick="@{viewModel::onFABClick}"
                 app:fab_label = "@string/wish"
                 />
             
