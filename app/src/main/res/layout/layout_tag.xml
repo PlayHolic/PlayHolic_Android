@@ -10,7 +10,7 @@
         
         <variable
             name = "viewModel"
-            type = "me.plic.playholic.tag.cast.TagCastViewModel"
+            type = "me.plic.playholic.tag.TagViewModel"
             />
     </data>
     
@@ -18,16 +18,13 @@
         android:id = "@+id/tag_history_cast"
         android:layout_width = "match_parent"
         android:layout_height = "200dp"
-        android:paddingTop="0dp"
         android:background = "@drawable/border_bottom_gray"
-        app:adapter = "@{viewModel.adapter}"
+        android:paddingTop = "0dp"
+        app:adapter = "@{viewModel}"
         app:autoScrollMode = "uniform"
         app:darkColor = "@color/colorPrimary"
-        app:layout_constraintEnd_toEndOf = "parent"
-        app:radiusPercent="0.6"
-        app:layout_constraintStart_toStartOf = "parent"
-        app:layout_constraintTop_toBottomOf = "@+id/text_header_cast"
         app:lightColor = "@color/colorVaguePrimary"
+        app:radiusPercent = "0.6"
         app:scrollSpeed = "3"
         />
 </layout>

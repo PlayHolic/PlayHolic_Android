@@ -141,24 +141,31 @@
             <!--태그-->
             <include
                 android:id = "@+id/tag_cast"
-                layout = "@layout/layout_tag_cast"
-                app:viewModel = "@{castViewModel}"
+                style = "@style/TagLayoutStyle"
+                layout = "@layout/layout_tag"
+                app:layout_constraintTop_toBottomOf = "@+id/text_header_cast"
+                app:viewModel = "@{tagViewModel}"
                 />
             
-            <com.moxun.tagcloudlib.view.TagCloudView
-                android:id = "@+id/tag_history_crew"
+            <TextView
+                android:id = "@+id/text_header_crew"
+                style = "@style/HeaderHistory"
                 android:layout_width = "0dp"
-                android:layout_height = "wrap_content"
-                android:layout_marginTop = "@dimen/item_default_margin"
-                android:background = "@android:color/white"
-                app:autoScrollMode = "uniform"
-                app:darkColor = "@color/colorPrimary"
+                android:layout_marginTop = "12dp"
+                android:text = "@string/most_crew"
                 app:layout_constraintEnd_toEndOf = "parent"
                 app:layout_constraintStart_toStartOf = "parent"
                 app:layout_constraintTop_toBottomOf = "@+id/tag_cast"
-                app:lightColor = "@color/colorVaguePrimary"
-                app:scrollSpeed = "3"
                 />
+            <!--태그-->
+            <include
+                android:id = "@+id/tag_crew"
+                style = "@style/TagLayoutStyle"
+                layout = "@layout/layout_tag"
+                app:layout_constraintTop_toBottomOf = "@+id/text_header_crew"
+                app:viewModel = "@{tagViewModel}"
+                />
+        
         </android.support.constraint.ConstraintLayout>
     </android.support.v4.widget.NestedScrollView>
 </layout>
