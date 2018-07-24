@@ -18,6 +18,7 @@
     
     <style name = "TextViewStyle"
         parent = "android:Widget.TextView">
+        <item name = "android:lineSpacingExtra">2.4dp</item>
         <item name = "android:fontFamily">@font/nanum_gothic</item>
         <item name = "android:textColor">@color/colorFadeBlack</item>
         <item name = "android:textSize">13sp</item>
