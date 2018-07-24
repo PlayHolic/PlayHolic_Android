@@ -3,7 +3,7 @@ package me.plic.playholic.main
 import android.support.test.rule.ActivityTestRule
 import me.plic.playholic.R
 import me.plic.playholic.ui.main.MainActivity
-import me.plic.playholic.history.HistoryFragment
+import me.plic.playholic.ui.history.HistoryFragment
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
