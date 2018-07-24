@@ -142,6 +142,7 @@
         <include
             android:id = "@+id/fam_main"
             layout = "@layout/fam_main"
+            app:viewModel="@{viewModel}"
             />
     
     </android.support.constraint.ConstraintLayout>
