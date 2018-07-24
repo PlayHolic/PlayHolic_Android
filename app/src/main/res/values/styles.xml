@@ -18,6 +18,7 @@
     
     <style name = "TextViewStyle"
         parent = "android:Widget.TextView">
+        <item name = "android:lineSpacingExtra">2.4dp</item>
         <item name = "android:fontFamily">@font/nanum_gothic</item>
         <item name = "android:textColor">@color/colorFadeBlack</item>
         <item name = "android:textSize">13sp</item>
@@ -25,7 +26,7 @@
     
     <style name = "ToolbarDefault">
         <item name = "contentInsetStartWithNavigation">0dp</item>
-        <item name = "android:background">@android:color/white</item>
+        <item name = "android:background">@drawable/background_toolbar</item>
         <item name = "titleTextAppearance">@style/ToolbarTitle</item>
         <item name = "android:layout_height">?attr/toolbarSize</item>
     </style>
@@ -165,7 +166,7 @@
         <item name = "android:fontFamily">@font/nanum_gothic_bold</item>
         <item name = "android:gravity">left</item>
         <item name = "android:layout_height">wrap_content</item>
-        <item name = "android:background">@android:color/white</item>
+        <item name = "android:background">@drawable/border_top_darkwhite</item>
     </style>
     
     <style name = "TagLayoutStyle">
