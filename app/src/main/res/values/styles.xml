@@ -25,7 +25,7 @@
     
     <style name = "ToolbarDefault">
         <item name = "contentInsetStartWithNavigation">0dp</item>
-        <item name = "android:background">@android:color/white</item>
+        <item name = "android:background">@drawable/background_toolbar</item>
         <item name = "titleTextAppearance">@style/ToolbarTitle</item>
         <item name = "android:layout_height">?attr/toolbarSize</item>
     </style>
