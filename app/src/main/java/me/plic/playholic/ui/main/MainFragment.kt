@@ -8,13 +8,12 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.*
 import me.plic.playholic.R
 import me.plic.playholic.bucket.BucketViewModel
-import me.plic.playholic.common.SwitchScreen
+import me.plic.playholic.common.ActivityHelper
 import me.plic.playholic.databinding.FragmentMainBinding
 import me.plic.playholic.mypage.MyPageFragment
 import me.plic.playholic.ticket.TicketViewModel
-import me.plic.playholic.ui.history.HistoryFragment
 
-class MainFragment : Fragment(), SwitchScreen {
+class MainFragment : Fragment(), ActivityHelper {
 
     lateinit var binding: FragmentMainBinding
 
@@ -33,7 +32,7 @@ class MainFragment : Fragment(), SwitchScreen {
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {
             R.id.menu_my -> {
-                goToMyPage()
+                replaceFragmentToActivity(MyPageFragment())
                 return true
             }
         }
@@ -46,8 +45,7 @@ class MainFragment : Fragment(), SwitchScreen {
         binding.viewModel = ViewModelProviders.of(this)
                 .get(MainFragmentViewModel::class.java)
                 .apply {
-                    switchScreen = this@MainFragment
-                    fgManager = this@MainFragment.fragmentManager
+                    activityHelper = this@MainFragment
                 }
 
         binding.ticketViewModel = TicketViewModel()
@@ -88,27 +86,15 @@ class MainFragment : Fragment(), SwitchScreen {
         }
     }
 
-    private fun goToMyPage() {
-        activity?.apply {
-            supportFragmentManager
-                    .beginTransaction()
-                    .replace(R.id.frame_main, MyPageFragment())
-                    .addToBackStack(null)
-                    .commit()
-        }
-    }
-
     /**
      * 새로운 프래그먼트로 교체하며 현재 프래그먼트를 백스택에 추가
      */
-    override fun applyFragment() {
-        activity?.apply {
-            supportFragmentManager
-                    .beginTransaction()
-                    .replace(R.id.frame_main, HistoryFragment())
-                    .addToBackStack(null)
-                    .commit()
-        }
+    override fun replaceFragmentToActivity(fragment : Fragment) {
+        me.plic.playholic.util.replaceFragmentToActivity(
+                activity?.supportFragmentManager,
+                fragment,
+                R.id.frame_main
+        )
     }
 
 }
