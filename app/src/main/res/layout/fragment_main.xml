@@ -95,7 +95,7 @@
             android:background = "@drawable/border_round_purple_05"
             android:drawableEnd = "@drawable/ic_chevron_right_primary_24dp"
             android:gravity = "center"
-            android:onClick = "@{() -> viewModel.applyFragment()}"
+            android:onClick = "@{() -> viewModel.onHistoryButtonClick()}"
             android:paddingBottom = "2dp"
             android:paddingEnd = "3dp"
             android:paddingStart = "9dp"

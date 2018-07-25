@@ -1,36 +1,31 @@
 package me.plic.playholic.ui.main
 
 import android.arch.lifecycle.ViewModel
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
 import android.view.View
 import me.plic.playholic.R
-import me.plic.playholic.common.SwitchScreen
+import me.plic.playholic.common.ActivityHelper
+import me.plic.playholic.ui.history.HistoryFragment
 import me.plic.playholic.ui.wish.WishFragment
 
 class MainFragmentViewModel : ViewModel() {
 
-    lateinit var switchScreen: SwitchScreen
-    var fgManager: FragmentManager? = null
+    lateinit var activityHelper: ActivityHelper
 
-    fun applyFragment() {
-        if (::switchScreen.isInitialized) switchScreen.applyFragment()
-        else throw UninitializedPropertyAccessException("switchScreen is not initialized")
+    //Check activityHelper is initialized.
+    private fun isActivityHelperInitialized() = (::activityHelper.isInitialized)
+
+
+    fun onHistoryButtonClick() {
+        if (isActivityHelperInitialized()) {
+            activityHelper.replaceFragmentToActivity(HistoryFragment())
+        }
     }
 
     fun onFABClick(view: View) {
-        when (view.id) {
-            R.id.fab_wish -> applyFragment(WishFragment())
-        }
-
-    }
-
-    private fun applyFragment(fragment: Fragment) {
-        fgManager?.apply {
-            beginTransaction()
-                    .replace(R.id.frame_main, WishFragment())
-                    .addToBackStack(null)
-                    .commit()
+        if (isActivityHelperInitialized()) {
+            when (view.id) {
+                R.id.fab_wish -> activityHelper.replaceFragmentToActivity(WishFragment())
+            }
         }
     }
 }
