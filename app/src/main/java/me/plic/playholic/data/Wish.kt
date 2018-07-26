@@ -1,5 +1,6 @@
 package me.plic.playholic.data
 
+import java.io.Serializable
 import java.util.*
 
 data class Wish(
@@ -7,4 +8,4 @@ data class Wish(
         val date : Date,
         val location : String
 
-)
+) : Serializable
