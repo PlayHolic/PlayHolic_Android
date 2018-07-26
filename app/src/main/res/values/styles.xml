@@ -111,9 +111,10 @@
         <item name = "android:layout_height">wrap_content</item>
     </style>
     
-    <style name = "SpecificBtn">
+    <style name = "SpecificBtn" parent="Widget.AppCompat.Button.Borderless">
         <item name = "android:background">@android:color/white</item>
         <item name = "android:layout_width">0dp</item>
+        <item name = "android:fontFamily">@font/nanum_gothic</item>
         <item name = "android:layout_height">wrap_content</item>
         <item name = "android:textColor">@color/colorWarmGray</item>
         <item name = "android:textSize">12sp</item>
@@ -131,6 +132,7 @@
         <item name = "android:layout_height">wrap_content</item>
         <item name = "android:layout_width">wrap_content</item>
         <item name = "android:layout_marginBottom">20dp</item>
+        <item name = "android:layout_marginTop">10dp</item>
     </style>
     
     <style name = "DatePickText">

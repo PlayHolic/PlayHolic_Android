@@ -26,7 +26,8 @@
                     android:id = "@+id/img_spe_poster"
                     android:layout_width = "0dp"
                     android:layout_height = "0dp"
-                    app:layout_constraintDimensionRatio = "5:2"
+                    android:background = "@color/colorFadeBlack"
+                    app:layout_constraintDimensionRatio = "5:2.8"
                     app:layout_constraintEnd_toEndOf = "parent"
                     app:layout_constraintStart_toStartOf = "parent"
                     app:layout_constraintTop_toTopOf = "parent"
@@ -81,8 +82,8 @@
                     android:id = "@+id/view_spe_line"
                     android:layout_width = "0.5dp"
                     android:layout_height = "0dp"
-                    android:layout_marginBottom = "13dp"
-                    android:layout_marginTop = "13dp"
+                    android:layout_marginBottom = "12dp"
+                    android:layout_marginTop = "12dp"
                     android:background = "@color/colorDarkWhite"
                     app:layout_constraintBottom_toBottomOf = "@+id/btn_spe_wish"
                     app:layout_constraintEnd_toStartOf = "@+id/btn_spe_ticket"
@@ -106,16 +107,20 @@
         
         <GridLayout
             android:id = "@+id/grid_spe"
-            android:layout_width = "match_parent"
-            android:layout_height = "0dp"
+            android:layout_width = "0dp"
+            android:layout_height = "wrap_content"
             android:layout_marginTop = "12dp"
             android:background = "@drawable/border_rec_darkwhite"
             android:backgroundTint = "@android:color/white"
             android:columnCount = "1"
+            android:paddingBottom = "19dp"
             android:paddingEnd = "@dimen/item_default_margin"
             android:paddingStart = "@dimen/item_default_margin"
             android:paddingTop = "18dp"
             android:useDefaultMargins = "true"
+            app:layout_constraintBottom_toTopOf = "@+id/btn_my_seen"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintStart_toStartOf = "parent"
             app:layout_constraintTop_toBottomOf = "@+id/card_spe"
             >
             
@@ -175,6 +180,8 @@
             android:layout_width = "0dp"
             android:layout_height = "wrap_content"
             android:layout_marginTop = "1dp"
+            style="?attr/borderlessButtonStyle"
+            app:layout_constraintVertical_bias="0"
             android:background = "@android:color/white"
             android:drawableEnd = "@drawable/ic_keyboard_arrow_up_black_24dp"
             android:fontFamily = "@font/nanum_gothic_bold"
@@ -186,7 +193,6 @@
             app:layout_constraintStart_toStartOf = "parent"
             app:layout_constraintTop_toBottomOf = "@+id/grid_spe"
             />
-    
     
     </android.support.constraint.ConstraintLayout>
 </layout>
