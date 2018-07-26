@@ -20,6 +20,11 @@ class WishAdapter : BaseRecyclerViewAdapter<Wish, WishViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: WishViewHolder, position: Int) {
-        holder.getClickObservable(getItem(position)).subscribe(clickSubject)
+        holder.apply {
+            getItem(position).apply {
+                bindWishItemViewModel(this)
+                getClickObservable(this)
+            }
+        }
     }
 }

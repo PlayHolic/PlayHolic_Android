@@ -31,7 +31,7 @@
                 android:layout_height = "wrap_content"
                 android:layout_marginStart = "@dimen/item_default_margin"
                 android:fontFamily = "@font/nanum_gothic_bold"
-                android:text = "가가"
+                android:text = "@{wish.title}"
                 app:layout_constraintStart_toStartOf = "parent"
                 app:layout_constraintTop_toTopOf = "parent"
                 />
@@ -41,7 +41,7 @@
                 android:layout_width = "wrap_content"
                 android:layout_height = "wrap_content"
                 android:layout_marginTop = "@dimen/margin_ten"
-                android:text = "2018.03.16~"
+                android:text = "@{wish.date}"
                 app:layout_constraintStart_toStartOf = "@+id/text_wish_title"
                 app:layout_constraintTop_toBottomOf = "@+id/text_wish_title"
                 />
@@ -50,8 +50,8 @@
                 android:id = "@+id/text_wish_location"
                 android:layout_width = "wrap_content"
                 android:layout_height = "wrap_content"
-                android:text = "대학로"
                 android:layout_marginTop = "2dp"
+                android:text = "@{wish.location}"
                 app:layout_constraintStart_toStartOf = "@+id/text_wish_title"
                 app:layout_constraintTop_toBottomOf = "@+id/text_wish_date"
                 />

@@ -2,18 +2,24 @@
 <layout
     xmlns:android = "http://schemas.android.com/apk/res/android">
     
-
-<android.support.v7.widget.Toolbar
-    android:id = "@+id/toolbar"
-    style = "@style/ToolbarDefault"
-    android:layout_width = "match_parent"
-    >
+    <data>
+        <variable
+            name = "count"
+            type = "Integer"/>
+    </data>
     
-    <TextView
-        android:id = "@+id/text_tool_cnt"
-        style="@style/TextCount"
-        />
+    <android.support.v7.widget.Toolbar
+        android:id = "@+id/toolbar"
+        style = "@style/ToolbarDefault"
+        android:layout_width = "match_parent"
+        >
+        
+        <TextView
+            android:id = "@+id/text_tool_cnt"
+            style = "@style/TextCount"
+            android:text='@{count > 0 ? String.valueOf(count) : ""}'
+            />
     
-</android.support.v7.widget.Toolbar>
+    </android.support.v7.widget.Toolbar>
 
 </layout>
