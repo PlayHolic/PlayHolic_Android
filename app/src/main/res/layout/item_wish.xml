@@ -4,27 +4,34 @@
     xmlns:app = "http://schemas.android.com/apk/res-auto"
     >
     
+    <data>
+        
+        <variable
+            name = "wish"
+            type = "me.plic.playholic.ui.wish.WishItemViewModel"
+            />
+    </data>
     
     <android.support.v7.widget.CardView
         android:layout_width = "match_parent"
-        android:layout_height = "125dp"
-        android:layout_marginTop= "8dp"
-        app:cardElevation = "2dp"
+        android:layout_height = "121dp"
+        android:layout_marginTop = "8dp"
+        app:cardElevation = "0.8dp"
         >
         
         <android.support.constraint.ConstraintLayout
             android:layout_width = "match_parent"
-            android:paddingTop="@dimen/item_default_margin"
             android:layout_height = "match_parent"
+            android:paddingTop = "@dimen/item_default_margin"
             >
             
             <TextView
                 android:id = "@+id/text_wish_title"
                 android:layout_width = "wrap_content"
                 android:layout_height = "wrap_content"
+                android:layout_marginStart = "@dimen/item_default_margin"
                 android:fontFamily = "@font/nanum_gothic_bold"
                 android:text = "가가"
-                android:layout_marginStart="@dimen/item_default_margin"
                 app:layout_constraintStart_toStartOf = "parent"
                 app:layout_constraintTop_toTopOf = "parent"
                 />
@@ -35,7 +42,7 @@
                 android:layout_height = "wrap_content"
                 android:layout_marginTop = "@dimen/margin_ten"
                 android:text = "2018.03.16~"
-                app:layout_constraintStart_toStartOf="@+id/text_wish_title"
+                app:layout_constraintStart_toStartOf = "@+id/text_wish_title"
                 app:layout_constraintTop_toBottomOf = "@+id/text_wish_title"
                 />
             
@@ -44,7 +51,8 @@
                 android:layout_width = "wrap_content"
                 android:layout_height = "wrap_content"
                 android:text = "대학로"
-                app:layout_constraintStart_toStartOf="@+id/text_wish_title"
+                android:layout_marginTop = "2dp"
+                app:layout_constraintStart_toStartOf = "@+id/text_wish_title"
                 app:layout_constraintTop_toBottomOf = "@+id/text_wish_date"
                 />
             
@@ -52,12 +60,13 @@
                 android:id = "@+id/img_wish_poster"
                 android:layout_width = "0dp"
                 android:layout_height = "0dp"
-                android:layout_marginEnd="@dimen/item_default_margin"
+                android:layout_marginBottom = "13dp"
+                android:layout_marginEnd = "16dp"
                 android:background = "@color/colorFadeBlack"
-                app:layout_constraintBottom_toBottomOf = "@+id/text_wish_location"
+                app:layout_constraintBottom_toTopOf = "@+id/view_wish_line"
                 app:layout_constraintDimensionRatio = "1:1"
                 app:layout_constraintEnd_toEndOf = "parent"
-                app:layout_constraintTop_toTopOf = "@+id/text_wish_title"
+                app:layout_constraintTop_toTopOf = "parent"
                 />
             
             <View
@@ -66,49 +75,48 @@
                 android:layout_height = "0.5dp"
                 android:layout_marginTop = "@dimen/margin_ten"
                 android:background = "@color/colorDarkWhite"
+                app:layout_constraintBottom_toBottomOf = "parent"
                 app:layout_constraintEnd_toEndOf = "parent"
                 app:layout_constraintStart_toStartOf = "parent"
                 app:layout_constraintTop_toBottomOf = "@+id/text_wish_location"
+                app:layout_constraintVertical_bias = "0"
                 />
             
             <TextView
                 android:id = "@+id/text_wish_release"
+                style = "@style/ItemWishButton"
                 android:layout_width = "wrap_content"
                 android:layout_height = "wrap_content"
-                android:textColor = "@color/colorWarmGray"
-                android:textSize = "12sp"
-                android:text="@string/release_wish"
-                app:layout_constraintEnd_toStartOf="@+id/view_wish_line_vertical"
-                app:layout_constraintTop_toBottomOf="@+id/view_wish_line"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                android:text = "@string/release_wish"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toStartOf = "@+id/view_wish_line_vertical"
                 app:layout_constraintHorizontal_chainStyle = "spread"
+                app:layout_constraintStart_toStartOf = "parent"
+                app:layout_constraintTop_toBottomOf = "@+id/view_wish_line"
                 />
-    
+            
             <View
                 android:id = "@+id/view_wish_line_vertical"
                 android:layout_width = "0.5dp"
                 android:layout_height = "0dp"
                 android:background = "@color/colorDarkWhite"
-                app:layout_constraintEnd_toStartOf="@+id/text_add_ticket"
-                app:layout_constraintStart_toEndOf="@+id/text_wish_release"
-               app:layout_constraintTop_toTopOf="@+id/text_wish_release"
-                app:layout_constraintBottom_toBottomOf="@+id/text_wish_release"
+                app:layout_constraintBottom_toBottomOf = "@+id/text_wish_release"
+                app:layout_constraintEnd_toStartOf = "@+id/text_add_ticket"
+                app:layout_constraintStart_toEndOf = "@+id/text_wish_release"
+                app:layout_constraintTop_toTopOf = "@+id/text_wish_release"
                 />
             
             <TextView
                 android:id = "@+id/text_add_ticket"
+                style = "@style/ItemWishButton"
                 android:layout_width = "wrap_content"
                 android:layout_height = "wrap_content"
-                android:textColor = "@color/colorWarmGray"
-                android:textSize = "12sp"
-                android:text="@string/add_ticket"
-                app:layout_constraintStart_toEndOf="@+id/view_wish_line_vertical"
-                app:layout_constraintBottom_toBottomOf="@+id/text_wish_release"
-                app:layout_constraintTop_toTopOf="@+id/text_wish_release"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:text = "@string/add_ticket"
+                app:layout_constraintBottom_toBottomOf = "parent"
+                app:layout_constraintEnd_toEndOf = "parent"
+                app:layout_constraintStart_toEndOf = "@+id/view_wish_line_vertical"
+                app:layout_constraintTop_toBottomOf = "@+id/view_wish_line"
                 />
-        
         
         </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.CardView>
