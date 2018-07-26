@@ -23,7 +23,7 @@ class WishAdapter : BaseRecyclerViewAdapter<Wish, WishViewHolder>() {
         holder.apply {
             getItem(position).apply {
                 bindWishItemViewModel(this)
-                getClickObservable(this)
+                getClickObservable(this).subscribe(clickSubject)
             }
         }
     }
