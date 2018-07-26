@@ -3,6 +3,7 @@ package me.plic.playholic.ui.wish
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,6 +21,7 @@ class WishFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_wish, container, false)
+        binding.wishViewModel = WishViewModel()
 
         initToolbar()
 
@@ -29,6 +31,15 @@ class WishFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
+        initRecyclerView()
+    }
+
+    private fun initRecyclerView() {
+        binding.recyclerWish.apply {
+            setHasFixedSize(true)
+            layoutManager = LinearLayoutManager(this@WishFragment.activity)
+            adapter = this@WishFragment.binding.wishViewModel?.adapter
+        }
     }
 
     private fun initToolbar() {
