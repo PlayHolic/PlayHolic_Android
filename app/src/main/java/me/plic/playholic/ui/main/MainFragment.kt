@@ -13,7 +13,6 @@ import me.plic.playholic.databinding.FragmentMainBinding
 import me.plic.playholic.mypage.MyPageFragment
 import me.plic.playholic.ticket.TicketViewModel
 
-class MainFragment : Fragment(), ActivityHelper {
 
     lateinit var binding: FragmentMainBinding
 
@@ -89,8 +88,6 @@ class MainFragment : Fragment(), ActivityHelper {
     /**
      * 새로운 프래그먼트로 교체하며 현재 프래그먼트를 백스택에 추가
      */
-    override fun replaceFragmentToActivity(fragment : Fragment) {
-        me.plic.playholic.util.replaceFragmentToActivity(
                 activity?.supportFragmentManager,
                 fragment,
                 R.id.frame_main
