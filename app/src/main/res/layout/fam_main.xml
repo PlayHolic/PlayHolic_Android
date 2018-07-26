@@ -51,6 +51,7 @@
                 android:id = "@+id/fab_comment"
                 style = "@style/FABMain"
                 android:layout_width = "wrap_content"
+                android:onClick="@{viewModel::onFABClick}"
                 android:layout_height = "wrap_content"
                 android:src = "@drawable/ic_write_w"
                 app:fab_label = "@string/comment"

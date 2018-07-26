@@ -1,5 +1,6 @@
 package me.plic.playholic.ui.main
 
+import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.databinding.DataBindingUtil
 import android.os.Bundle
@@ -8,13 +9,15 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.*
 import me.plic.playholic.R
 import me.plic.playholic.bucket.BucketViewModel
-import me.plic.playholic.common.ActivityHelper
 import me.plic.playholic.databinding.FragmentMainBinding
 import me.plic.playholic.mypage.MyPageFragment
 import me.plic.playholic.ticket.TicketViewModel
+import me.plic.playholic.util.replaceFragmentToActivity
 
+class MainFragment : Fragment() {
 
-    lateinit var binding: FragmentMainBinding
+    private lateinit var binding: FragmentMainBinding
+    private lateinit var viewModel: MainFragmentViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,20 +42,34 @@ import me.plic.playholic.ticket.TicketViewModel
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        observeViewModelData()
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false)
 
-        binding.viewModel = ViewModelProviders.of(this)
-                .get(MainFragmentViewModel::class.java)
-                .apply {
-                    activityHelper = this@MainFragment
-                }
-
-        binding.ticketViewModel = TicketViewModel()
-        binding.bucketViewModel = BucketViewModel()
+        binding.apply {
+            viewModel = this@MainFragment.viewModel
+            ticketViewModel = TicketViewModel()
+            bucketViewModel = BucketViewModel()
+        }
 
         initToolbar()
 
         return binding.root
+    }
+
+    /**
+     * Observe LiveData in ViewModel.
+     */
+    private fun observeViewModelData() {
+        viewModel = ViewModelProviders.of(this)
+                .get(MainFragmentViewModel::class.java)
+
+                .apply {
+                    replaceFragment.observe(this@MainFragment, Observer {
+                        it?.getContentIfNotHandled()?.let {
+                            replaceFragmentToActivity(it)
+                        }
+                    })
+                }
     }
 
     private fun initToolbar() {
@@ -88,10 +105,11 @@ import me.plic.playholic.ticket.TicketViewModel
     /**
      * 새로운 프래그먼트로 교체하며 현재 프래그먼트를 백스택에 추가
      */
+    private fun replaceFragmentToActivity(fragment: Fragment) {
+        replaceFragmentToActivity(
                 activity?.supportFragmentManager,
                 fragment,
                 R.id.frame_main
         )
     }
-
 }
