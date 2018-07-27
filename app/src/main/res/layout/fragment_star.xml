@@ -65,10 +65,12 @@
         
         <android.support.v7.widget.RecyclerView
             android:id = "@+id/recycler_star"
-            android:layout_width = "match_parent"
+            android:layout_width = "0dp"
             android:layout_height = "0dp"
             android:layout_marginTop = "@dimen/item_default_margin"
             android:background = "@android:color/white"
+            android:paddingEnd = "0dp"
+            android:paddingStart = "@dimen/item_default_margin"
             app:layout_constraintBottom_toBottomOf = "parent"
             app:layout_constraintEnd_toEndOf = "parent"
             app:layout_constraintStart_toStartOf = "parent"

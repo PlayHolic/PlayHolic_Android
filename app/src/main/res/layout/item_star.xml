@@ -14,19 +14,18 @@
     
     
     <android.support.constraint.ConstraintLayout
-        android:layout_width = "100dp"
+        android:layout_width = "wrap_content"
         android:layout_height = "wrap_content"
-        android:layout_marginStart = "@dimen/item_default_margin"
-        android:layout_marginTop = "@dimen/item_default_margin"
         android:background = "@android:color/white"
         >
         
         <ImageView
+            android:scaleType="centerCrop"
             android:id = "@+id/img_star_poster"
-            android:layout_width = "0dp"
             android:layout_height = "0dp"
+            android:layout_width="110dp"
             android:background = "@color/colorFadeBlack"
-            app:layout_constraintDimensionRatio = "1:1.4"
+            app:layout_constraintDimensionRatio = "1:1.3"
             app:layout_constraintEnd_toEndOf = "parent"
             app:layout_constraintStart_toStartOf = "parent"
             app:layout_constraintTop_toTopOf = "parent"
@@ -39,6 +38,7 @@
             android:layout_marginTop = "@dimen/margin_ten"
             android:ellipsize = "end"
             android:gravity = "center"
+            android:maxLines = "1"
             android:text = "@{star.title}"
             android:textSize = "12sp"
             app:layout_constraintEnd_toEndOf = "parent"
@@ -52,7 +52,7 @@
             android:layout_height = "wrap_content"
             android:layout_marginTop = "6dp"
             android:drawablePadding = "@dimen/padding_drawable"
-            android:drawableStart = "@drawable/ic_star_gray"
+            android:drawableStart = "@drawable/ic_star_fill_sm"
             android:gravity = "center"
             android:text = "@{String.valueOf(star.score)}"
             android:textColor = "@color/colorWarmGray"
