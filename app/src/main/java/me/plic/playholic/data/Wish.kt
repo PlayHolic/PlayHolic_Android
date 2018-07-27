@@ -1,11 +1,14 @@
 package me.plic.playholic.data
 
 import java.io.Serializable
-import java.util.*
 
 data class Wish(
         val title : String,
-        val date : Date,
-        val location : String
-
+        val term : String,
+        val location : String,
+        val running : String,
+        val age : String,
+        val cast : String,
+        val crew : String,
+        val producer : String
 ) : Serializable
