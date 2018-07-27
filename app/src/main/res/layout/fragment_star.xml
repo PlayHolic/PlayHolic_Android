@@ -4,6 +4,14 @@
     xmlns:app = "http://schemas.android.com/apk/res-auto"
     >
     
+    <data>
+        
+        <variable
+            name = "starViewModel"
+            type = "me.plic.playholic.ui.star.StarViewModel"
+            />
+    </data>
+    
     <android.support.constraint.ConstraintLayout
         android:layout_width = "match_parent"
         android:layout_height = "match_parent"
@@ -45,9 +53,10 @@
             android:id = "@+id/text_star_count"
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
+            android:layout_marginStart = "5dp"
             android:background = "@drawable/border_rec_gray"
             android:padding = "2dp"
-            android:layout_marginStart="5dp"
+            android:text = "@{String.valueOf(starViewModel.stars.size())}"
             android:textColor = "@color/colorWarmGray"
             android:textSize = "12sp"
             app:layout_constraintBottom_toBottomOf = "@+id/text_star_title"

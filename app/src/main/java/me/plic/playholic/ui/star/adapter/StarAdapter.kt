@@ -1,5 +1,6 @@
 package me.plic.playholic.ui.star.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import me.plic.playholic.R
@@ -19,7 +20,7 @@ class StarAdapter: BaseRecyclerViewAdapter<Star, StarViewHolder>() {
     override fun onBindViewHolder(holder: StarViewHolder, position: Int) {
         holder.apply {
             getItem(position).apply {
-
+                bindStarItemViewModel(this)
             }
         }
     }
