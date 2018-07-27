@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import me.plic.playholic.R
+import me.plic.playholic.common.view.ItemOffsetDecorator
 import me.plic.playholic.databinding.FragmentStarBinding
 import me.plic.playholic.ui.main.MainActivity
 
@@ -36,9 +37,14 @@ class StarFragment: Fragment() {
 
     private fun initRecyclerView() {
         binding.recyclerStar.apply {
-            setHasFixedSize(true)
-            layoutManager = GridLayoutManager(this@StarFragment.context, 3)
-            adapter = this@StarFragment.binding.starViewModel?.adapter
+            this@StarFragment.context?.let {
+                setHasFixedSize(true)
+                layoutManager = GridLayoutManager(it, 3)
+                addItemDecoration(ItemOffsetDecorator(
+                        resources.getDimensionPixelSize(R.dimen.item_default_margin), 3))
+                adapter = this@StarFragment.binding.starViewModel?.adapter
+
+            }
         }
     }
 
