@@ -3,6 +3,7 @@ package me.plic.playholic.ui.star
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.widget.GridLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,6 +21,7 @@ class StarFragment: Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_star, container, false)
+        binding.starViewModel = StarViewModel()
 
         initToolbar()
 
@@ -29,6 +31,15 @@ class StarFragment: Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
+        initRecyclerView()
+    }
+
+    private fun initRecyclerView() {
+        binding.recyclerStar.apply {
+            setHasFixedSize(true)
+            layoutManager = GridLayoutManager(this@StarFragment.context, 3)
+            adapter = this@StarFragment.binding.starViewModel?.adapter
+        }
     }
 
     private fun initToolbar() {
