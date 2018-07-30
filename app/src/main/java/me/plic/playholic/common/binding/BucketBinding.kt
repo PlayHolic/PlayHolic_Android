@@ -8,11 +8,6 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 
-@BindingConversion
-fun dateToString(date: Date): String {
-    return SimpleDateFormat("yyyy.MM.dd hh:mma", Locale.US).format(date)
-}
-
 @BindingAdapter("dDay")
 fun setDDay(view: TextView, date: Date) {
     val targetDay = Calendar.getInstance().apply {
