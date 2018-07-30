@@ -20,7 +20,8 @@ class CommentAdapter : BaseRecyclerViewAdapter<me.plic.playholic.data.Comment, C
     }
 
     override fun onBindViewHolder(holder: CommentViewHolder, position: Int) {
-        getItem(position).let {
+        getItem(position).also {
+            holder.bindCommentItemViewModel(it)
             holder.getClickObservable(it).subscribe(clickSubject)
         }
     }
