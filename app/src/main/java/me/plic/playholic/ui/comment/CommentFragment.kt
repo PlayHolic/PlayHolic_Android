@@ -12,7 +12,7 @@ import me.plic.playholic.ui.main.MainActivity
 
 class CommentFragment: Fragment() {
 
-    lateinit var binding : FragmentCommentBinding
+    private lateinit var binding : FragmentCommentBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +20,7 @@ class CommentFragment: Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_comment, container, false)
+        binding.viewModel = CommentViewModel()
 
         initToolbar()
 
@@ -29,6 +30,14 @@ class CommentFragment: Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
+        initRecyclerView()
+
+    }
+
+    private fun initRecyclerView() {
+        binding.recyclerCmt.apply {
+            adapter = binding.viewModel?.adapter
+        }
     }
 
     private fun initToolbar() {
