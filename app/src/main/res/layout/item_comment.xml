@@ -13,7 +13,7 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width = "match_parent"
         android:layout_height = "wrap_content"
-        android:background = "@android:color/white"
+        android:background = "@drawable/border_top_bot_darkwhite"
         android:padding = "@dimen/item_default_margin"
         >
         
@@ -34,6 +34,7 @@
             android:layout_width = "0dp"
             android:layout_height = "wrap_content"
             android:text = "@{comment.date}"
+            timeFormat="@{textCmtDate.getText().toString()}"
             android:layout_marginTop = "@dimen/margin_ten"
             android:maxLines = "1"
             android:textColor = "@color/colorWarmGray"
