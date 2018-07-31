@@ -6,6 +6,8 @@ apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'kotlin-kapt'
 
+apply plugin: 'realm-android'
+
 android {
     compileSdkVersion 27
     defaultConfig {
@@ -24,6 +26,10 @@ android {
     }
     dataBinding {
         enabled = true
+    }
+
+    realm {
+        syncEnabled = true
     }
 }
 
