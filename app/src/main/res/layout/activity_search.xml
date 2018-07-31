@@ -25,6 +25,7 @@
                 style = "@style/TabLayout"
                 android:layout_width = "match_parent"
                 android:layout_height = "wrap_content"
+                app:tabBackground = "@drawable/tab_color_selector"
                 />
         
         </android.support.design.widget.AppBarLayout>
