@@ -22,6 +22,8 @@
         </activity>
         <activity android:name = ".ui.login.LoginActivity">
         </activity>
+        <activity android:name = ".ui.search.SearchActivity">
+        </activity>
     </application>
 
 </manifest>
