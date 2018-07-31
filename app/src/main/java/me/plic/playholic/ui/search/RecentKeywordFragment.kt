@@ -9,12 +9,12 @@ import android.view.ViewGroup
 import me.plic.playholic.R
 import me.plic.playholic.databinding.FragmentSearchBinding
 
-class SearchFragment : Fragment() {
+class RecentKeywordFragment : Fragment() {
 
     private lateinit var  binding : FragmentSearchBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_search, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.layout_keyword, container, false)
 
         return binding.root
     }
