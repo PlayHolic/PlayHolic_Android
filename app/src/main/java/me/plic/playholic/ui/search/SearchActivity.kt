@@ -3,7 +3,6 @@ package me.plic.playholic.ui.search
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_search.view.*
 import me.plic.playholic.R
 import me.plic.playholic.common.adapter.ViewPagerAdapter
 import me.plic.playholic.databinding.ActivitySearchBinding
@@ -21,7 +20,7 @@ class SearchActivity : AppCompatActivity() {
     }
 
     private fun initToolbar() {
-        setSupportActionBar(binding.toolbar.toolbar).apply {
+        setSupportActionBar(binding.toolbar?.toolbar).apply {
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
         }
     }
