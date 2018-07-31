@@ -2,6 +2,7 @@ package me.plic.playholic.ui.main
 
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
+import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -12,6 +13,7 @@ import me.plic.playholic.bucket.BucketViewModel
 import me.plic.playholic.databinding.FragmentMainBinding
 import me.plic.playholic.mypage.MyPageFragment
 import me.plic.playholic.ticket.TicketViewModel
+import me.plic.playholic.ui.search.SearchActivity
 import me.plic.playholic.util.replaceFragmentToActivity
 
 class MainFragment : Fragment() {
@@ -35,6 +37,11 @@ class MainFragment : Fragment() {
         when (item?.itemId) {
             R.id.menu_my -> {
                 replaceFragmentToActivity(MyPageFragment())
+                return true
+            }
+
+            R.id.menu_search -> {
+                startActivity(Intent(this.activity, SearchActivity::class.java))
                 return true
             }
         }
