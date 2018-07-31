@@ -7,11 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import me.plic.playholic.R
-import me.plic.playholic.databinding.FragmentSearchBinding
+import me.plic.playholic.databinding.LayoutKeywordBinding
 
 class RecentKeywordFragment : Fragment() {
 
-    private lateinit var  binding : FragmentSearchBinding
+    private lateinit var  binding : LayoutKeywordBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.layout_keyword, container, false)
