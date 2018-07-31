@@ -15,28 +15,10 @@
             android:orientation = "vertical"
             >
             
-            <android.support.v7.widget.Toolbar
+            <include
                 android:id = "@+id/toolbar"
-                android:layout_width = "match_parent"
-                android:layout_height = "?android:attr/actionBarSize"
-                android:background = "@android:color/white"
-                android:padding = "@dimen/margin_ten"
-                app:layout_scrollFlags = "scroll|snap"
-                >
-                
-                <EditText
-                    android:id = "@+id/edit_search"
-                    android:layout_width = "match_parent"
-                    android:layout_height = "wrap_content"
-                    android:background = "@drawable/border_round_trans"
-                    android:hint = "@string/hint_search"
-                    android:inputType = "textUri"
-                    android:maxLines = "1"
-                    android:padding = "@dimen/margin_ten"
-                    android:textSize = "12sp"
-                    />
-            
-            </android.support.v7.widget.Toolbar>
+                layout = "@layout/toolbar_search"
+                />
             
             <android.support.design.widget.TabLayout
                 android:id = "@+id/tab_search"
