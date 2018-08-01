@@ -7,6 +7,7 @@ import java.util.*
 @RealmClass
 open class RecentKeyword : RealmModel {
 
+    var id : Int = 0
     var keyword : String =""
     var date : Date = Date()
 }
