@@ -7,6 +7,11 @@
     <data>
         
         <variable
+            name = "viewModel"
+            type = "me.plic.playholic.ui.star.StarFragmentViewModel"
+            />
+        
+        <variable
             name = "starViewModel"
             type = "me.plic.playholic.ui.star.StarViewModel"
             />
@@ -28,7 +33,9 @@
             android:layout_height = "wrap_content"
             android:layout_marginTop = "2dp"
             android:background = "@android:color/white"
+            android:drawableEnd = "@drawable/ic_chevron_right_16dp"
             android:fontFamily = "@font/nanum_gothic_bold"
+            android:onClick = "@{viewModel::onYetButtonClick}"
             android:padding = "12dp"
             android:text = "@string/yet_star"
             android:textSize = "14sp"
