@@ -27,6 +27,8 @@
         </activity>
         <activity android:name = ".ui.star.StarYetActivity">
         </activity>
+        <activity android:name = ".ui.comment.CommentYetActivity">
+        </activity>
     </application>
 
 </manifest>
