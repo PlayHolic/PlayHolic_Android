@@ -55,6 +55,7 @@ dependencies {
     implementation 'com.ramotion.foldingcell:folding-cell:1.2.2'
     implementation 'de.hdodenhof:circleimageview:2.2.0'
     implementation 'com.moxun:tagcloudlib:1.2.0'
+    implementation 'io.realm:android-adapters:2.1.1'
 
     implementation "android.arch.lifecycle:extensions:$lifecycle_version"
 
