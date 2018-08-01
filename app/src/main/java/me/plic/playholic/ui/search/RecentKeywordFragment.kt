@@ -46,7 +46,7 @@ class RecentKeywordFragment : Fragment() {
     }
 
     private fun initRecyclerView() {
-        binding.recyclerSearch.apply {
+        binding.recyclerKeyword.apply {
             val dataSet = realm.where<RecentKeyword>().sort(RecentKeyword::date.name, Sort.DESCENDING).findAll()
 
             adapter = RecentKeywordAdapter(dataSet, true).apply {
