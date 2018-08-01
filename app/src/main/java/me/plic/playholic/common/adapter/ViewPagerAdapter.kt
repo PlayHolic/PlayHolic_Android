@@ -12,21 +12,15 @@ class ViewPagerAdapter(fm: FragmentManager,
                        val tabTitles: Array<String>) : FragmentStatePagerAdapter(fm) {
 
 
-    override fun getItem(position: Int): Fragment {
-        when (position) {
-            0 -> RecentKeywordFragment()
-            1 -> PopKeywordFragment()
-        }
-        return RecentKeywordFragment()
+    override fun getItem(position: Int): Fragment = when (position) {
+        0 -> RecentKeywordFragment()
+        1 -> PopKeywordFragment()
+        else -> RecentKeywordFragment()
     }
 
-
-    override fun getCount(): Int {
-        return pageCount
-    }
+    override fun getCount(): Int = pageCount
 
 
-    override fun getPageTitle(position: Int): CharSequence? {
-        return tabTitles[position]
-    }
+    override fun getPageTitle(position: Int): CharSequence? = tabTitles[position]
+    
 }
