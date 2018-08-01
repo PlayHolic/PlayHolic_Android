@@ -1,5 +1,8 @@
 package me.plic.playholic.ui.star
 
+import android.arch.lifecycle.Observer
+import android.arch.lifecycle.ViewModelProviders
+import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -15,16 +18,22 @@ import me.plic.playholic.ui.main.MainActivity
 class StarFragment: Fragment() {
 
     private lateinit var binding : FragmentStarBinding
+    private lateinit var viewModel : StarFragmentViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        observeViewModelData()
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_star, container, false)
-        binding.starViewModel = StarViewModel()
+        binding.apply {
+            starViewModel = StarViewModel()
+            viewModel = this@StarFragment.viewModel
+        }
 
         initToolbar()
+
 
         return binding.root
     }
@@ -33,6 +42,22 @@ class StarFragment: Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         initRecyclerView()
+    }
+
+    /**
+     * Observe LiveData in ViewModel.
+     */
+    private fun observeViewModelData() {
+        viewModel = ViewModelProviders.of(this)
+                .get(StarFragmentViewModel::class.java)
+
+                .apply {
+                    startActivity.observe(this@StarFragment, Observer {
+                        it?.getContentIfNotHandled()?.let {
+                            startActivity(Intent(this@StarFragment.activity, StarYetActivity::class.java))
+                        }
+                    })
+                }
     }
 
     private fun initRecyclerView() {
