@@ -13,5 +13,16 @@ class CommentYetActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_comment_yet)
+
+        initToolbar()
+    }
+
+    private fun initToolbar() {
+        setSupportActionBar(binding.toolbar?.toolbar).apply {
+            supportActionBar?.apply {
+                title = getString(R.string.yet_comment)
+                setDisplayHomeAsUpEnabled(true)
+            }
+        }
     }
 }

@@ -8,6 +8,11 @@
         
         <variable
             name = "viewModel"
+            type = "me.plic.playholic.ui.comment.CommentFragmentViewModel"
+            />
+        
+        <variable
+            name = "commentViewModel"
             type = "me.plic.playholic.ui.comment.CommentViewModel"
             />
     </data>
@@ -27,12 +32,13 @@
             android:layout_width = "0dp"
             android:layout_height = "wrap_content"
             android:background = "@drawable/border_fill_darkwhite"
+            android:drawableEnd = "@drawable/ic_chevron_right_16dp"
             android:fontFamily = "@font/nanum_gothic_bold"
+            android:gravity = "center_vertical"
+            android:onClick = "@{viewModel::onYetButtonClick}"
             android:padding = "12dp"
-            android:gravity="center_vertical"
             android:text = "@string/yet_comment"
             android:textSize = "14sp"
-            android:drawableEnd="@drawable/ic_chevron_right_16dp"
             app:layout_constraintEnd_toEndOf = "parent"
             app:layout_constraintStart_toStartOf = "parent"
             app:layout_constraintTop_toBottomOf = "@+id/toolbar"
@@ -42,8 +48,8 @@
             android:id = "@+id/text_cmt_title"
             android:layout_width = "wrap_content"
             android:layout_height = "wrap_content"
-            android:layout_marginTop="@dimen/default_top_margin"
-            android:layout_marginStart="@dimen/item_default_margin"
+            android:layout_marginStart = "@dimen/item_default_margin"
+            android:layout_marginTop = "@dimen/default_top_margin"
             android:fontFamily = "@font/nanum_gothic_bold"
             android:text = "@string/my_comment"
             android:textSize = "16sp"
@@ -58,7 +64,7 @@
             android:layout_marginStart = "5dp"
             android:background = "@drawable/border_rec_gray"
             android:padding = "2dp"
-            android:text = "@{String.valueOf(viewModel.comments.size())}"
+            android:text = "@{String.valueOf(commentViewModel.comments.size())}"
             android:textColor = "@color/colorWarmGray"
             android:textSize = "12sp"
             app:layout_constraintBottom_toBottomOf = "@+id/text_cmt_title"
@@ -69,7 +75,7 @@
             android:id = "@+id/recycler_cmt"
             android:layout_width = "match_parent"
             android:layout_height = "0dp"
-            android:layout_marginTop="@dimen/default_top_margin"
+            android:layout_marginTop = "@dimen/default_top_margin"
             android:background = "@android:color/white"
             app:layoutManager = "android.support.v7.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf = "parent"
