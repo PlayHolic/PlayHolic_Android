@@ -5,7 +5,7 @@ import android.databinding.ObservableField
 import me.plic.playholic.data.RecentKeyword
 import java.util.*
 
-class KeywordItemViewModel(item: RecentKeyword) : BaseObservable() {
+class RecentKeywordItemViewModel(item: RecentKeyword) : BaseObservable() {
 
     val id: ObservableField<Int> = ObservableField()
     val keyword: ObservableField<String> = ObservableField()

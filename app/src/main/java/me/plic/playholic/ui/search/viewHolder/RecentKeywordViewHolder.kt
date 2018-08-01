@@ -6,14 +6,14 @@ import android.view.View
 import io.reactivex.Observable
 import me.plic.playholic.data.RecentKeyword
 import me.plic.playholic.databinding.ItemKeywordRecentBinding
-import me.plic.playholic.ui.search.KeywordItemViewModel
+import me.plic.playholic.ui.search.RecentKeywordItemViewModel
 
 class RecentKeywordViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
 
     val binding : ItemKeywordRecentBinding? = DataBindingUtil.bind(itemView)
 
     fun bindKeywordItemViewModel(item : RecentKeyword) {
-        binding?.keyword = KeywordItemViewModel(item)
+        binding?.keyword = RecentKeywordItemViewModel(item)
     }
 
     fun getClickObservable(item : RecentKeyword) : Observable<RecentKeyword> {
