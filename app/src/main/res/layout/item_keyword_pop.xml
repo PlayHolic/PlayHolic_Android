@@ -4,15 +4,22 @@
     xmlns:app = "http://schemas.android.com/apk/res-auto"
     >
     
+    <data>
+        
+        <variable
+            name = "pop"
+            type = "me.plic.playholic.ui.search.PopKeywordItemViewModel"
+            />
+    </data>
     
     <android.support.constraint.ConstraintLayout
         android:layout_width = "match_parent"
         android:layout_height = "wrap_content"
-        android:paddingTop="@dimen/default_top_margin"
-        android:paddingBottom="@dimen/default_top_margin"
         android:background = "@android:color/white"
-        android:paddingEnd="@dimen/item_default_margin"
-        android:paddingStart="@dimen/item_default_margin"
+        android:paddingBottom = "@dimen/default_top_margin"
+        android:paddingEnd = "@dimen/item_default_margin"
+        android:paddingStart = "@dimen/item_default_margin"
+        android:paddingTop = "@dimen/default_top_margin"
         >
         
         <TextView
@@ -20,6 +27,7 @@
             android:layout_width = "0dp"
             android:layout_height = "wrap_content"
             android:fontFamily = "@font/nanum_gothic_bold"
+            android:text = "@{pop.id.toString}"
             android:textColor = "@color/colorPrimary"
             android:textSize = "12sp"
             app:layout_constraintBottom_toBottomOf = "parent"
@@ -34,14 +42,15 @@
             android:layout_height = "wrap_content"
             android:layout_marginStart = "30dp"
             android:maxLines = "1"
+            android:text = "@{pop.keyword}"
             android:textColor = "@color/colorFadeBlack"
             android:textSize = "12sp"
             app:layout_constraintBottom_toBottomOf = "@+id/text_pop_num"
             app:layout_constraintEnd_toEndOf = "parent"
             app:layout_constraintHorizontal_weight = "6"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf = "parent"
             app:layout_constraintTop_toTopOf = "@+id/text_pop_num"
             />
-        
+    
     </android.support.constraint.ConstraintLayout>
 </layout>
