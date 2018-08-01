@@ -4,15 +4,15 @@ import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import me.plic.playholic.R
-import me.plic.playholic.databinding.ActivityStarYetBinding
+import me.plic.playholic.databinding.ActivityYetBinding
 
 class StarYetActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityStarYetBinding
+    private lateinit var binding : ActivityYetBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_star_yet)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_yet)
 
         initToolbar()
     }

@@ -4,15 +4,15 @@ import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import me.plic.playholic.R
-import me.plic.playholic.databinding.ActivityCommentYetBinding
+import me.plic.playholic.databinding.ActivityYetBinding
 
 class CommentYetActivity : AppCompatActivity() {
 
-    private lateinit var binding : ActivityCommentYetBinding
+    private lateinit var binding : ActivityYetBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_comment_yet)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_yet)
 
         initToolbar()
     }
