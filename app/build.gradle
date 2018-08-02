@@ -44,21 +44,28 @@ dependencies {
     def lifecycle_version = "1.1.1"
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    kapt "com.android.databinding:compiler:$android_version"
+
+    //support
     implementation "com.android.support:appcompat-v7:$support_version"
-    implementation "com.android.support.constraint:constraint-layout:$constraint_version"
     implementation "com.android.support:design:$support_version"
     implementation "com.android.support:cardview-v7:$support_version"
-
     implementation "com.android.support.constraint:constraint-layout:$constraint_version"
+
+    //ui
     implementation 'com.github.clans:fab:1.6.4'
     implementation 'com.ramotion.foldingcell:folding-cell:1.2.2'
     implementation 'de.hdodenhof:circleimageview:2.2.0'
     implementation 'com.moxun:tagcloudlib:1.2.0'
     implementation 'io.realm:android-adapters:2.1.1'
 
+    //lifecycle
     implementation "android.arch.lifecycle:extensions:$lifecycle_version"
 
+    //rx
     implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
     implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
     implementation "io.reactivex.rxjava2:rxkotlin:$rxkotlin_version"
@@ -70,6 +77,5 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     testImplementation 'org.mockito:mockito-core:2.11.0'
-
 
 }
