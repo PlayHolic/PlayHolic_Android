@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android = "http://schemas.android.com/apk/res/android">
+    
+    <data>
+        
+        <variable
+            name = "auto"
+            type = "me.plic.playholic.ui.search.AutoKeywordItemViewModel"
+            />
+    </data>
+    
+    <android.support.constraint.ConstraintLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:background = "@android:color/white"
+        android:paddingBottom = "@dimen/default_top_margin"
+        android:paddingEnd = "@dimen/item_default_margin"
+        android:paddingStart = "@dimen/item_default_margin"
+        android:paddingTop = "@dimen/default_top_margin"
+        >
+        
+        <TextView
+            android:id = "@+id/text_auto_keyword"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"
+            android:textAllCaps = "false"
+            android:textSize = "12sp"
+            />
+    
+    </android.support.constraint.ConstraintLayout>
+</layout>
