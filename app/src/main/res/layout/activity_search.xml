@@ -4,6 +4,19 @@
     xmlns:app = "http://schemas.android.com/apk/res-auto"
     >
     
+    <data>
+        
+        <import
+            alias = "View"
+            type = "android.view.View"
+            />
+        
+        <variable
+            name = "viewModel"
+            type = "me.plic.playholic.ui.search.SearchActivityViewModel"
+            />
+    </data>
+    
     <android.support.constraint.ConstraintLayout
         android:layout_width = "match_parent"
         android:layout_height = "match_parent"
@@ -20,6 +33,7 @@
             
             <include
                 android:id = "@+id/toolbar"
+                app:viewModel="@{viewModel}"
                 layout = "@layout/toolbar_search"
                 />
             
@@ -28,6 +42,7 @@
                 style = "@style/TabLayout"
                 android:layout_width = "match_parent"
                 android:layout_height = "wrap_content"
+                android:visibility = "@{viewModel.isSearching.get() ? View.GONE : View.VISIBLE}"
                 app:layout_constraintTop_toBottomOf = "@+id/toolbar"
                 app:tabBackground = "@drawable/tab_color_selector"
                 />
@@ -37,6 +52,7 @@
             android:id = "@+id/vp_search"
             android:layout_width = "match_parent"
             android:layout_height = "0dp"
+            android:visibility = "@{viewModel.isSearching ? View.GONE : View.VISIBLE}"
             app:layout_constraintBottom_toBottomOf = "parent"
             app:layout_constraintEnd_toEndOf = "parent"
             app:layout_constraintStart_toStartOf = "parent"
