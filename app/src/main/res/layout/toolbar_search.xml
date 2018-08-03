@@ -4,6 +4,13 @@
     xmlns:app = "http://schemas.android.com/apk/res-auto"
     >
     
+    <data>
+        <variable
+            name = "viewModel"
+            type = "me.plic.playholic.ui.search.SearchActivityViewModel"/>
+    </data>
+    
+    
     <android.support.v7.widget.Toolbar
         android:id = "@+id/toolbar"
         app:contentInsetEnd ="0dp"
@@ -14,6 +21,7 @@
         >
         
         <android.support.constraint.ConstraintLayout
+            android:id="@+id/con_toolbar_search"
             android:layout_width = "match_parent"
             android:layout_height = "match_parent"
             android:layout_marginTop="8dp"
@@ -21,8 +29,13 @@
             android:layout_marginEnd="@dimen/item_default_margin"
             >
             
-            <EditText
+            <AutoCompleteTextView
                 android:id = "@+id/edit_search"
+                android:completionThreshold="1"
+                android:onTextChanged="@{viewModel::onSearchTextChanged}"
+                android:popupBackground="@android:color/transparent"
+                android:dropDownWidth="match_parent"
+                android:dropDownVerticalOffset="@dimen/item_default_margin"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -34,6 +47,7 @@
                 android:textColorHint="@color/colorWarmGray"
                 android:inputType = "textUri"
                 android:maxLines = "1"
+                android:imeOptions="actionGo"
                 android:padding = "@dimen/margin_ten"
                 android:textSize = "12sp"
                 />
