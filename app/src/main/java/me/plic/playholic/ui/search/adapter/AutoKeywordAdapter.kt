@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Filter
 import android.widget.Filterable
+import io.reactivex.subjects.PublishSubject
 import me.plic.playholic.data.AutoKeyword
 import me.plic.playholic.ui.search.viewHolder.AutoKeywordViewHolder
 
@@ -18,6 +19,7 @@ class AutoKeywordAdapter(context: Context?,
     private var suggestions: MutableList<AutoKeyword> = mutableListOf() //auto complete keyword
     private var inputWord: String = "" //input Word
 
+    private val clickSubject: PublishSubject<AutoKeyword> = PublishSubject.create()
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val view: View
@@ -26,6 +28,8 @@ class AutoKeywordAdapter(context: Context?,
             view = LayoutInflater.from(parent?.context).inflate(resource, parent, false)
 
             AutoKeywordViewHolder(view).apply {
+                bindAutoKeywordItemViewModel(getItem(position), inputWord)
+                getClickObservable(getItem(position)).subscribe(clickSubject)
                 view.tag = this
             }
 
